@@ -7,13 +7,8 @@ import { mapCenter, busIcon } from './marker_data';
 const img = document.createElement('img');
 
 img.setAttribute('src', busIcon);
+img.className = 'map-ctrl recenter i'
 img.hidden = true;
-
-// styles
-img.style.width = '100px';
-img.style.margin = '15px';
-img.style.cursor = 'pointer';
-img.style.filter = 'drop-shadow(1.5px 1.5px 1.5px #000)';
 
 // functionality
 const handleClick = () => map.setCenter(mapCenter);

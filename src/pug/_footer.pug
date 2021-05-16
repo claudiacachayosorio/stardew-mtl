@@ -5,24 +5,24 @@
 
 
 mixin heart
-	span.i-heart
+	span.i.i-heart
 		include ../assets/svg/heart.svg
 
 p.tagline Built with #[+heart] by #[a.link(href = website)] Claudia Cachay-Osorio
 
 
 mixin sass
-	span.stack-i.i-sass
+	span.stack-i.i.i-sass
 		include ../assets/svg/sass.svg
 mixin js
-	span.stack-i.i-js
+	span.stack-i.i.i-js
 		include ../assets/svg/js.svg
 mixin gmaps
-	span.stack-i.i-gmaps
+	span.stack-i.i.i-gmaps
 		include ../assets/svg/gmaps.svg
 mixin repo
 	a.stack-link(href = repo)
-		span.stack-i.i-github
+		span.stack-i.i.i-github
 			include ../assets/svg/github.svg
 
 div.stack #[+sass] + #[+js] + #[+gmaps] = #[+repo]

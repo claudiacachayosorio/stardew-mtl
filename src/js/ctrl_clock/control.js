@@ -25,12 +25,12 @@ function createElements() {
 
 // set classes
 function setClasses() {
-	innerDiv.className		= 'clock';
+	innerDiv.className		= 'map-ctrl clock';
 	dayDiv.className		= 'clock-day';
 	timeDiv.className		= 'clock-time';
-	iconsDiv.className		= 'clock-icons';
-	weatherImg.className	= 'clock-icons-weather';
-	seasonImg.className		= 'clock-icons-season';
+	iconsDiv.className		= 'clock-i';
+	weatherImg.className	= 'i-weather';
+	seasonImg.className		= 'i-season';
 }
 
 // default content
