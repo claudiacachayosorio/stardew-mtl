@@ -6,37 +6,43 @@
 		friendshipcentre = "https://nfcm.org",
 		resiliencemtl = "https://resiliencemontreal.com";
 
-+b.acknow
-	+e.P.text The city of Montreal is located on unceded Indigenous lands. The island's name is Tiohti:áke in Kanien’kéha and Mooniyang in Anishinaabemowin. Its recognized custodians are the Kanien’kehá:ka Nation, members of the Haudenosaunee confederacy.
 
-	+e.UL.links-ul
-		+e.LI.links-li.--id_nativeland
+section.acknow
+	p.acknow-text The city of Montreal is located on unceded Indigenous lands. The island's name is Tiohti:áke in Kanien’kéha and Mooniyang in Anishinaabemowin. Its recognized custodians are the Kanien’kehá:ka Nation, members of the Haudenosaunee confederacy.
+
+
+	ul.acknow-ul
+
+		li.acknow-li.nativeland-li
 			| Find out your local toponymy: 
-			+e.A.link.--id_nativeland(
+			a.acknow-a.nativeland-a(
 				href=nativeland
 			) Native Land
 
-		+e.LI.links-li.--id_wapikoni
+		li.acknow-li.wapikoni-li
 			| Discover Indigenous creativity: 
-			+e.A.link.--id_wapkinoni(
+			a.acknow-a.wapikoni-a(
 				href=wapikoni
 			) Wapikoni Mobile
 
-		+e.LI.links-li.--id_support
-			+e.SPAN.links-li-text
+
+		li.acknow-li.support-li
+			span.support-innertext
 				| Support local communities:
-			+e.UL.links-ul.--nested
-				+e.LI.links-li.--nested.--id_womenshelter
-					+e.A.link.--id_womenshelter(
+
+			ul.acknow-ul.nested-list
+
+				li.acknow-li.nested-list.womenshelter-li
+					a.acknow-a.womenshelter-a(
 						href=womenshelter
 					) Native Women's Shelter
 
-				+e.LI.links-li.--nested.--id_friendshipcentre
-					+e.A.link.--id_friendshipcentre(
+				li.acknow-li.nested-list.friendshipcentre-li
+					a.acknow-a.friendshipcentre-a(
 						href=friendshipcentre
 					) Native Friendship Centre
 
-				+e.LI.links-li.--nested.--id_resiliencemtl
-					+e.A.link.--id_resiliencemtl(
+				li.acknow-li.nested-list.resiliencemtl-li
+					a.acknow-a.resiliencemtl-a(
 						href=resiliencemtl
 					) Resilience Montreal

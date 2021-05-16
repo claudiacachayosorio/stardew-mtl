@@ -1,30 +1,30 @@
-+e.H1.title Stardew MTL
+h1 Stardew MTL
 
-+b.text
+- const pngDir = "../assets/png/";
 
-	- const bus = "../assets/png/locations/bus.png";
 
-	+e.P.intro
+section.text
+	p.intro
 		| This is a Stardew Valley inspired map sprinkled with my personal selection of Montreal's highlights. You can move around as you see fit to discover them. If you ever get lost, click on the bus 
-		+e.A.link(href="#map")
-			+e.IMG.icon.--id_bus(src=bus)
+		a.link(href="#map")
+			img.i-bus(src=pngDir + "bus.png")
 		|  icon in the top-left corner of the map. It will appear as you move away from the starting point.
 
 	mixin junimo
-		+e.IMG.icon.--id_junimo(src="../assets/png/misc/junimo.png")
-
-	+e.divider
+		img.i-junimo(src=ongDir + "junimo.png")
+	.text-divider
 		+junimo
 		+junimo
 		+junimo
 
 	include _acknow
 
-+b.map#map
 
-- const creditsLink = repo + "/#readme";
-- const creditsIcon = "../assets/png/misc/inventory.png"
+div.map#map
 
-+b.credits
-	+e.IMG.icon(src=creditsIcon)
-	+e.P.text Sources for the icons and other tools used to create this website can be found #[+e.A.link(href=creditsLink) here].
+
+section.credits
+	- const creditsLink = "https://github.com/claudiacachayosorio/stardew-mtl/#readme";
+
+	img.i-inventory(src=pngDir + "inventory.png")
+	p.credits-text Sources for the icons and other tools used to create this website can be found #[a.link(href=creditsLink) here].
