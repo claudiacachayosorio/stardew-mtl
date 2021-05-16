@@ -1,8 +1,8 @@
 # STARDEW MTL
 
-This is a simple static website built with plain JavaScript, Sass & Pug. The customized map is generated with Google Maps JavaScript API. It is compiled using Gulp and Rollup to bundle JS.
+Simple static website built with plain JavaScript, Sass & Pug. The customized map is generated with Google Maps JavaScript API. It's compiled using Gulp and Rollup to bundle JS.
 
-It's my take on this [custom Google Maps project](https://www.codementor.io/projects/web/build-a-custom-google-maps-theme-bf8levr6eg) by [Jessica Chan](https://coder-coder.com/) on [DevProjects](https://www.codementor.io/projects).
+This is my take on this [custom Google Maps project](https://www.codementor.io/projects/web/build-a-custom-google-maps-theme-bf8levr6eg) by [Jessica Chan](https://coder-coder.com/) on [DevProjects](https://www.codementor.io/projects).
 
 ## CREDITS
 

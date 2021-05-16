@@ -1,3 +1,5 @@
+// PLUGINS
+
 const { src, dest, watch, parallel, series } = require('gulp');
 
 const browsersync	= require('browser-sync'),
@@ -16,8 +18,8 @@ const browsersync	= require('browser-sync'),
 sass.compiler = require('sass');
 
 
+// JS FILES
 
-// JS files
 const jsSrc = 'src/js/index.js';
 const rollupOptions = {
 	input: jsSrc,
@@ -38,8 +40,8 @@ const jsTask = () => {
 }
 
 
+// SASS FILES
 
-// Sass files
 const sassSrc = 'src/sass/index.sass';
 const pcssPlugins = [ autoprefixer(), cssnano() ];
 
@@ -51,8 +53,8 @@ const sassTask = () => {
 }
 
 
+// PUG FILES
 
-// Pug files
 const pugSrc = 'src/pug/index.pug';
 const pugTask = () => {
 	return src(pugSrc)
@@ -61,8 +63,9 @@ const pugTask = () => {
 }
 
 
+// ASSETS
 
-// SVG files
+// SVG
 const svgSrc = 'src/assets/svg/**/*.svg';
 const svgTask = () => {
 	return src(svgSrc)
@@ -70,7 +73,7 @@ const svgTask = () => {
 		.pipe(dest('dist/assets/svg'));
 }
 
-// PNG files
+// PNG
 const pngSrc = 'src/assets/png/**/*.png';
 const pngTask = () => {
 	return src(pngSrc)
@@ -79,10 +82,7 @@ const pngTask = () => {
 }
 
 
-
-
-
-// Browsersync
+// BROWSERSYNC
 
 const browsersyncOptions = {
 	server: { baseDir: 'dist' },
@@ -103,9 +103,6 @@ const browsersyncReload = cb => {
 }
 
 
-
-
-
 // WATCH
 
 // Code files
@@ -118,14 +115,11 @@ const assetsTasks = parallel(svgTask, pngTask);
 const assetsSrc = [ 'src/assets/svg', 'src/assets/png' ];
 const reloadAssets = parallel(assetsTasks, browsersyncReload);
 
-// Cumul
+// All files
 const watchTask = () => {
 	watch(codeSrc, reloadApp);
 	watch(assetsSrc, reloadAssets);
 };
-
-
-
 
 
 // DEFAULT
