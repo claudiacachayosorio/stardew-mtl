@@ -1,0 +1,29 @@
+@use '../colors' as *
+@use '../typography' as *
+
+
+// map div
+
+.map
+	height: 90vh
+	width: 100%
+
+	border: $color-frame solid 10px
+	border-radius: 8px
+	box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px
+
+
+// clock control
+
+.clock
+	background-color: $color-clock
+	border: $color-clock-border solid 10px
+
+	margin: 15px
+	font-family: $font-pixel
+	font-size: $font-small
+
+	&-icons
+		&-season
+			border: $color-clock-center solid 3px
+			width: 42px

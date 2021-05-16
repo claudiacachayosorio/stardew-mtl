@@ -3,13 +3,7 @@
 ## Icons
 
 ### The Noun Project
-* Location & Videocam by Cubiy Design
-* Coffee by Bakunetsu Kaito
-* right by Ilaria Bernareggi
 * Heart by Bohdan Burmich
-
-### emoji.gg
-* Junimo by Kualdir
 
 ### Icons8
 * Google Maps
@@ -23,6 +17,7 @@
 ## Fonts
 * VT323 by Peter Hull
 * Londrina Sketch by Marcelo Magalhães
+* Roboto
 
 
 ## Helpful Resources

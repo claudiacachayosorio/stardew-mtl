@@ -12,17 +12,17 @@ p.tagline Built with #[+heart] by #[a.link(href = website)] Claudia Cachay-Osori
 
 
 mixin sass
-	span.i-sass
+	span.stack-i.i-sass
 		include ../assets/svg/sass.svg
 mixin js
-	span.i-js
+	span.stack-i.i-js
 		include ../assets/svg/js.svg
 mixin gmaps
-	span.i-gmaps
+	span.stack-i.i-gmaps
 		include ../assets/svg/gmaps.svg
 mixin repo
-	a.link(href = repo)
-		span.i-github
+	a.stack-link(href = repo)
+		span.stack-i.i-github
 			include ../assets/svg/github.svg
 
 div.stack #[+sass] + #[+js] + #[+gmaps] = #[+repo]

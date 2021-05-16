@@ -1,6 +1,10 @@
-@use 'utilities' as *
+// variables
 
-// Resets
+$filter-shadow: drop-shadow(1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5))
+
+
+// base settings
+
 *, *:before, *:after
 	box-sizing: inherit
 
@@ -11,33 +15,9 @@ html, body
 	height: 100%
 	margin: 0
 
-a
-	color: inherit
-	text-decoration: none
-
-
-
-// Typography
-
-html
-	font-size: $font-factor
-	font-family: $font-simple
-  
-body
-	color: $color-text
-	font-size: $font-medium
-	font-family: $font-pixel
-
-p
-	margin: 2rem 0
-
-h1
-	margin: 0
-
-
-
-// Misc
-
 svg
 	width: inherit
-	filter: drop-shadow(1.5px 1.5px 1.5px #000)
+	filter: $filter-shadow
+
+img
+	filter: $filter-shadow
