@@ -10,7 +10,7 @@ $font-title:		'Londrina Solid', $font-fallback
 $font-standard:		'Roboto', $font-fallback
 
 $font-factor:		10px
-$font-small:		2.2rem
+$font-small:		2.5rem
 $font-medium:		3rem
 $font-large:		8rem
 
@@ -46,9 +46,6 @@ body
 p
 	margin: 2rem 0
 
-h1
-	margin: 0
-
 a
 	color: inherit
 	text-decoration: none
@@ -67,13 +64,14 @@ h1
 	text-align: center
 	text-transform: uppercase
 
+	margin: 2rem 0
+
 main
 	@include dark-fonts
 
 footer
 	@include light-fonts
-	font-family: $font-standard
-	font-size: $font-small
-	letter-spacing: 0.05rem
-	word-spacing: 0.2rem
 	text-align: center
+
+.stack
+	font-family: $font-standard
