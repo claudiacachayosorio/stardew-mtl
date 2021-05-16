@@ -34,8 +34,8 @@ function setClasses() {
 }
 
 // default content
-const weatherImgSrc = '../assets/png/clock/sun.png';
-const seasonImgSrc	= '../assets/png/clock/spring.png';
+const weatherImgSrc = 'assets/png/clock/sun.png';
+const seasonImgSrc	= 'assets/png/clock/spring.png';
 
 function setDefaultContent() {
 	weatherImg.setAttribute('src', weatherImgSrc);

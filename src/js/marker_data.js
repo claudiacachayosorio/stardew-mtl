@@ -5,7 +5,7 @@ class Marker {
 		this.title = title;
 		this.position = { lat, lng };
 		this.icon = {
-			url: `../assets/png/locations/${iconFn}.png`,
+			url: `assets/png/locations/${iconFn}.png`,
 			scaledSize: { width: iconWidth, height: iconHeight }
 		};
 		this.optimized = false;

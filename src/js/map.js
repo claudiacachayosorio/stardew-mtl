@@ -10,13 +10,13 @@ const styles = [
 	{ featureType: 'transit.line',						stylers: [{ visibility: 'off' }] },
 	{ featureType: 'transit.station.rail',				stylers: [{ visibility: 'off' }] },
 
-	{ featureType: 'all',								stylers: [{ color: $.soilDark }] },
+	{ featureType: 'all',								stylers: [{ color: $.soildark }] },
 	{ featureType: 'landscape',							stylers: [{ color: $.grass }] },
 	{ featureType: 'water',								stylers: [{ color: $.water }] },
 	{ featureType: 'poi',								stylers: [{ color: $.pavement }] },
-	{ featureType: 'poi.park',							stylers: [{ color: $.grassDark }] },
+	{ featureType: 'poi.park',							stylers: [{ color: $.grassdark }] },
 	{ featureType: 'road.arterial',						stylers: [{ color: $.soil }] },
-	{ featureType: 'road.highway',						stylers: [{ color: $.roadMarking }] },
+	{ featureType: 'road.highway',						stylers: [{ color: $.roadmarking }] },
 	{ featureType: 'road.highway.controlled_access',	stylers: [{ color: $.road }] },
 	{ featureType: 'transit.station.airport',			stylers: [{ color: $.pavement }] },
 ];

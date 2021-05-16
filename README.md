@@ -2,7 +2,8 @@
 
 Simple static website built with plain JavaScript, Sass & Pug. The customized map is generated with Google Maps JavaScript API. It's compiled using Gulp and Rollup to bundle JS.
 
-This is my take on this [custom Google Maps project](https://www.codementor.io/projects/web/build-a-custom-google-maps-theme-bf8levr6eg) by [Jessica Chan](https://coder-coder.com/) on [DevProjects](https://www.codementor.io/projects).
+This is my take on this [custom Google Maps project](https://www.codementor.io/projects/web/build-a-custom-google-maps-theme-bf8levr6eg) by [Jessica Chan](https://coder-coder.com/) on DevProjects.
+
 
 ## CREDITS
 
@@ -24,5 +25,5 @@ This is my take on this [custom Google Maps project](https://www.codementor.io/p
 * [Stardew Valley Wiki](https://stardewvalleywiki.com/)
 * [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/)
 * [Gulp Workflow](https://coder-coder.com/quick-guide-to-browsersync-gulp-4/) [(repo)](https://github.com/thecodercoder/gulp-browsersync)
-* [Gulp Recipe](https://github.com/gulpjs/gulp/blob/master/docs/recipes/rollup-with-rollup-stream.md)
+* [Gulp Recipe for Rollup](https://github.com/gulpjs/gulp/blob/master/docs/recipes/rollup-with-rollup-stream.md)
 * [Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
