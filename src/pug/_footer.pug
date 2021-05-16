@@ -1,6 +1,6 @@
 -
 	const
-		website = "https://github.com/claudiacachayosorio",
+		website = "https://claudiacachayosorio.com",
 		repo = "https://github.com/claudiacachayosorio/stardew-mtl";
 
 
@@ -8,7 +8,7 @@ mixin heart
 	span.i-heart
 		include ../assets/svg/heart.svg
 
-p.tagline Built with #[+heart] by #[a.link(href=website)] Claudia Cachay-Osorio
+p.tagline Built with #[+heart] by #[a.link(href = website)] Claudia Cachay-Osorio
 
 
 mixin sass
@@ -16,13 +16,13 @@ mixin sass
 		include ../assets/svg/sass.svg
 mixin js
 	span.i-js
-		include ../assets/svg/sass.svg
+		include ../assets/svg/js.svg
 mixin gmaps
 	span.i-gmaps
 		include ../assets/svg/gmaps.svg
 mixin repo
-	a.link(href=repo)
+	a.link(href = repo)
 		span.i-github
 			include ../assets/svg/github.svg
 
-.stack #[+sass] + #[+js] + #[+gmaps] = #[+repo]
+div.stack #[+sass] + #[+js] + #[+gmaps] = #[+repo]

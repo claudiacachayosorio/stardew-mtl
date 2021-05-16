@@ -6,12 +6,9 @@ html(lang="en")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		title Stardew MTL
 
-		//- google fonts
-		- const fonts = "https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&family=VT323&family=Roboto&display=swap";
 		link(rel="preconnect" href="https://fonts.gstatic.com")
-		link(rel="stylesheet" href=fonts)
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&family=VT323&family=Roboto&display=swap")
 
-		//- styles
 		link(rel="stylesheet" href="./index.css")
 
 	body.sky
@@ -21,7 +18,5 @@ html(lang="en")
 		footer.col-1
 			include _footer
 
-		//- scripts
-		- const api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBS9vtCLKE5r0d_qtbdDJlmrl16C7rnYjw";
-		script(src=api)
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBS9vtCLKE5r0d_qtbdDJlmrl16C7rnYjw")
 		script(type="module" src="index.js")
