@@ -1,0 +1,42 @@
+-
+	const
+		nativeland = "https://native-land.ca",
+		wapikoni = "http://wapikoni.ca",
+		womenshelter = "https://nwsm.info",
+		friendshipcentre = "https://nfcm.org",
+		resiliencemtl = "https://resiliencemontreal.com";
+
++b.acknow
+	+e.P.text The city of Montreal is located on unceded Indigenous lands. The island's name is Tiohti:áke in Kanien’kéha and Mooniyang in Anishinaabemowin. Its recognized custodians are the Kanien’kehá:ka Nation, members of the Haudenosaunee confederacy.
+
+	+e.UL.links-ul
+		+e.LI.links-li.--id_nativeland
+			| Find out your local toponymy: 
+			+e.A.link.--id_nativeland(
+				href=nativeland
+			) Native Land
+
+		+e.LI.links-li.--id_wapikoni
+			| Discover Indigenous creativity: 
+			+e.A.link.--id_wapkinoni(
+				href=wapikoni
+			) Wapikoni Mobile
+
+		+e.LI.links-li.--id_support
+			+e.SPAN.links-li-text
+				| Support local communities:
+			+e.UL.links-ul.--nested
+				+e.LI.links-li.--nested.--id_womenshelter
+					+e.A.link.--id_womenshelter(
+						href=womenshelter
+					) Native Women's Shelter
+
+				+e.LI.links-li.--nested.--id_friendshipcentre
+					+e.A.link.--id_friendshipcentre(
+						href=friendshipcentre
+					) Native Friendship Centre
+
+				+e.LI.links-li.--nested.--id_resiliencemtl
+					+e.A.link.--id_resiliencemtl(
+						href=resiliencemtl
+					) Resilience Montreal

@@ -1,0 +1,22 @@
+//- tools
+include bemto/bemto
+-
+	set_bemto_settings({
+		prefix: "b-",
+		modifier: "--",
+	});
+
+//- fonts
+- const fonts = "https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&family=VT323&family=Roboto&display=swap";
+
+mixin gfonts
+	link(rel="preconnect" href="https://fonts.gstatic.com")
+	link(rel="stylesheet" href=fonts)
+
+
+//- variables
+-
+	const
+		website = "https://github.com/claudiacachayosorio",
+		repo = "https://github.com/claudiacachayosorio/stardew-mtl",
+		api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBS9vtCLKE5r0d_qtbdDJlmrl16C7rnYjw";

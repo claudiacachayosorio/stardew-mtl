@@ -1,0 +1,101 @@
+// Colors
+
+$color-text:					#3c262b
+$color-title:					#e7b012
+$color-frame:					#923e08
+$color-heart:					#d93500
+
+$color-bg-light:				#5edceb
+$color-bg-lighter:				#93fedb
+$color-bg-medium:				#259bfd
+$color-bg-dark:					#0261bb
+$color-bg-darker:				#023b7e
+
+$color-bg-medium:				#259bfd
+$color-bg-light:				#5edceb
+$color-bg-lighter:				#93fedb
+$color-bg-dark:					#0261bb
+$color-bg-darker:				#023b7e
+
+$color-textbox:					#fdbd6f
+$color-textbox-dark:			#d8a06f
+$color-textbox-border:			#fa9305
+$color-textbox-border-inner:	#b14e05
+$color-textbox-border-outer:	#853605
+
+$color-soil:					#e9d65d
+$color-soil-dark:				#e5bb51
+$color-soil-darker:				#e09947
+
+$color-pavement:				#66797f
+$color-pavement-light:			#6c996e
+
+$color-road:					#485b4c
+$color-road-border:				#324135
+$color-road-marking:			#607966
+
+$color-grass:					#40c51b
+$color-grass-dark:				#3ea031
+
+$color-water:					#3c82c3
+$color-water-light:				#49ccdd
+$color-water-dark:				#37549e
+
+$color-tree:					#0d7e2c
+$color-tree-light:				#12a92b
+$color-tree-dark:				#09543b
+$color-wood:					#775c25
+
+$color-cliff:					#787843
+$color-cliff-light:				#8e8e55
+$color-cliff-dark:				#686023
+$color-cliff-darker:			#544d39
+
+$color-mountain:				#acbe9a
+$color-mountain-dark:			#799e88
+$color-mountain-top:			#dde0ee
+$color-mountain-top-dark:		#bdc2da
+$color-mountain-border:			#576196
+
+$color-clock:					#ffd787
+$color-clock-border:			#f7ba00
+$color-clock-center:			#dc7b05
+$color-clock-center-border:		#f7ba00
+
+
+
+// Typography
+
+$font-fallback:		Arial, Helvetica, sans-serif
+$font-pixel:		'VT323', $font-fallback
+$font-title:		'Londrina Solid', $font-fallback
+$font-simple:		'Roboto', $font-fallback
+
+$font-factor:		10px
+$font-small:		2.5rem
+$font-medium:		3rem
+$font-large:		8rem
+
+
+
+// Mixins
+
+@mixin font-roboto
+	font-family: $font-simple
+	letter-spacing: 0.05rem
+	word-spacing: 0.2rem
+
+@mixin dark-fonts
+	a
+		color: $color-textbox-border-outer
+
+		&:hover
+			color: lighten($color-textbox-border-outer, 15%)
+
+@mixin light-fonts
+	color: $color-mountain-top
+	a
+		color: $color-textbox
+
+		&:hover
+			color: darken($color-textbox, 15%)
