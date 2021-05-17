@@ -8,7 +8,7 @@ This is my take on this [DevProjects prompt](https://www.codementor.io/projects/
 ## Credits
 
 ### Images
-All Stardew Valley images are from the [Stardew Valley Wiki](https://stardewvalleywiki.com).
+All Stardew Valley images are from the [Stardew Valley Wiki](https://stardewvalleywiki.com/Category:Images).
 
 ### Icons
 * [Noun Project](https://thenounproject.com): Heart by Bohdan Burmich
