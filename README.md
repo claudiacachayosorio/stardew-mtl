@@ -27,3 +27,4 @@ This is my take on this [custom Google Maps project](https://www.codementor.io/p
 * [Gulp Workflow](https://coder-coder.com/quick-guide-to-browsersync-gulp-4/) [(repo)](https://github.com/thecodercoder/gulp-browsersync)
 * [Gulp Recipe for Rollup](https://github.com/gulpjs/gulp/blob/master/docs/recipes/rollup-with-rollup-stream.md)
 * [Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [Favicon tutorial](https://www.digitalocean.com/community/tutorials/how-to-add-a-favicon-to-your-website-with-html)
