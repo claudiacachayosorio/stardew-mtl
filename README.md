@@ -7,8 +7,10 @@ This is my take on this [DevProjects prompt](https://www.codementor.io/projects/
 
 ## Credits
 
+### Images
+All Stardew Valley images are from the [Stardew Valley Wiki](https://stardewvalleywiki.com).
+
 ### Icons
-* [Stardew Valley Wiki](https://stardewvalleywiki.com): all Stardew Valley images
 * [Noun Project](https://thenounproject.com): Heart by Bohdan Burmich
 * [Icons8](https://icons8.com): Google Maps
 * [Font Awesome](https://fontawesome.com): Sass, JavaScript & GitHub
