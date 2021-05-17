@@ -20,6 +20,7 @@ All Stardew Valley images are from the [Stardew Valley Wiki](https://stardewvall
 * [Londrina Solid](https://fonts.google.com/specimen/Londrina+Solid) by Marcelo Magalhães
 * [Roboto](https://fonts.google.com/specimen/Roboto) by Christian Robertson
 
+
 ## Resources
 * [Similar project tutorial](https://www.youtube.com/watch?v=CdDXbvBFXLY) // [repo](https://github.com/thecodercoder/super-mario-google-map)
 * [Simple glass effect](https://www.youtube.com/watch?v=O7WbVj5apxU) // [repo](https://github.com/developedbyed/glass-website)
