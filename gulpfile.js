@@ -65,14 +65,6 @@ const pugTask = () => {
 
 // ASSETS
 
-// SVG
-const svgSrc = 'src/assets/svg/**/*.svg';
-const svgTask = () => {
-	return src(svgSrc)
-		.pipe(imagemin())
-		.pipe(dest('dist/assets/svg'));
-}
-
 // PNG
 const pngSrc = 'src/assets/png/**/*.png';
 const pngTask = () => {
@@ -108,12 +100,11 @@ const browsersyncReload = cb => {
 // Code files
 const compileTasks = parallel(pugTask, sassTask, jsTask);
 const codeSrc = [ 'src/pug', 'src/sass', 'src/js' ];
-const reloadApp = parallel(compileTasks, browsersyncReload);
+const reloadApp = series(compileTasks, browsersyncReload);
 
 // Assets
-const assetsTasks = parallel(svgTask, pngTask);
-const assetsSrc = [ 'src/assets/svg', 'src/assets/png' ];
-const reloadAssets = parallel(assetsTasks, browsersyncReload);
+const assetsSrc = [ 'src/assets/png' ];
+const reloadAssets = series(pngTask, browsersyncReload);
 
 // All files
 const watchTask = () => {
