@@ -2,11 +2,21 @@
   "name": "stardew-mtl",
   "version": "0.1.0",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "watch": "webpack --watch",
+    "start": "webpack serve --open",
+    "build": "webpack"
+  },
   "dependencies": {
     "sass": "^1.32.12"
   },
   "devDependencies": {
-    "webpack": "^5.37.1"
+    "css-loader": "^5.2.5",
+    "html-loader": "^2.1.2",
+    "sass-loader": "^11.1.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
