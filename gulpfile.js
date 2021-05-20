@@ -12,7 +12,6 @@ const browsersync	= require('browser-sync'),
 	  postcss		= require('gulp-postcss'),
 	  autoprefixer	= require('autoprefixer'),
 	  cssnano		= require('cssnano'),
-	  pug			= require('gulp-pug'),
 	  imagemin		= require('gulp-imagemin');
 
 sass.compiler = require('sass');
@@ -49,17 +48,7 @@ const sassTask = () => {
 	return src(sassSrc, { sourcemaps: true })
 		.pipe(sass())
 		.pipe(postcss(pcssPlugins))
-		.pipe(dest('dist', { sourcemaps: '.' }));
-}
-
-
-// PUG FILES
-
-const pugSrc = 'src/pug/index.pug';
-const pugTask = () => {
-	return src(pugSrc)
-		.pipe(pug())
-		.pipe(dest('dist'));
+		.pipe(dest('src/css', { sourcemaps: '.' }));
 }
 
 
@@ -98,8 +87,8 @@ const browsersyncReload = cb => {
 // WATCH
 
 // Code files
-const compileTasks = parallel(pugTask, sassTask, jsTask);
-const codeSrc = [ 'src/pug', 'src/sass', 'src/js' ];
+const compileTasks = parallel(sassTask, jsTask);
+const codeSrc = [ 'src/sass', 'src/js' ];
 const reloadApp = series(compileTasks, browsersyncReload);
 
 // Assets
@@ -110,17 +99,18 @@ const reloadAssets = series(pngTask, browsersyncReload);
 const watchTask = () => {
 	watch(codeSrc, reloadApp);
 	watch(assetsSrc, reloadAssets);
-};
+}
+
+const watchSass = () => {
+	watch('src/sass', sassTask);
+}
 
 
 // DEFAULT
 
-const loadAll = parallel(compileTasks, assetsTasks);
-
 const defaultTasks = series(
-	loadAll,
-	browsersyncServer,
-	watchTask
+	sassTask,
+	watchSass
 );
 
 exports.default = defaultTasks;

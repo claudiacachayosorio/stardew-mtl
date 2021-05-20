@@ -1,0 +1,188 @@
+@use 'colors' as *
+@use 'utilities'as *
+
+
+// Settings
+// ======================================================= //
+
+*, *:before, *:after
+	box-sizing: inherit
+
+*
+	margin: 0
+
+html
+	box-sizing: border-box
+	font-size: 10px
+
+body
+	color: $color-text
+	font-family: $font-main
+	font-size: $font-medium
+	line-height: 1.2
+
+li
+	list-style: none
+
+a
+	text-decoration: none
+
+
+// control icons sizes with container
+.i svg, .i a
+	height: inherit
+	width: inherit
+
+
+// Main
+// ======================================================= //
+
+main
+	background-color: $color-bg-dark
+	background: linear-gradient($color-bg-darker, $color-bg-dark, $color-bg-medium, $color-bg-light, $color-bg-lighter)
+	@include link-lighten($color-textbox-border-outer)
+	padding: 5% 10%
+
+h1
+	font-family: $font-title
+	font-size: $font-large
+	color: $color-title
+	text-shadow: $box-shadow
+
+	text-transform: uppercase
+	letter-spacing: 0.5rem
+	text-align: center
+	margin-bottom: 3rem
+
+
+// Text
+// ======================================================= //
+
+.text
+	background-color: #fff
+	background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1))
+	border-radius: 25px
+	box-shadow: $box-shadow
+
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding: 3% 5%
+
+	&-divider
+		width: fit-content
+		margin: 1.5rem 0
+
+.png
+	&_bus
+		height: 2rem
+		vertical-align: middle
+
+	&_junimo
+		width: 4rem
+		margin: 0 1.5rem
+
+
+// Acknowledgment
+// ======================================================= //
+
+@mixin marker($fn)
+	background-image: url('../assets/png/misc/#{$fn}.png')
+	background-position: left center
+	background-repeat: no-repeat
+	background-size: 2.5rem
+	padding-left: 4rem
+
+.acknow
+	&-ul
+		padding-left: 0
+
+.li
+	&_nativeland
+		@include marker('bundle_green')
+
+	&_wapikoni
+		@include marker('bundle_yellow')
+
+	&_support
+		@include marker('bundle_orange')
+
+
+// Map
+// ======================================================= //
+
+.map
+	border: $color-frame solid 10px
+	border-radius: 8px
+	box-shadow: $box-shadow
+
+	height: 90vh
+	width: 100%
+	margin: 4rem 0
+
+.map-ctrl
+	margin: 15px
+
+.recenter
+	cursor: pointer
+	width: 100px
+	filter: drop-shadow($box-shadow)
+
+.clock
+	background-color: $color-clock
+	border: $color-clock-border solid 10px
+	box-shadow: $box-shadow
+
+	font-family: $font-main
+	font-size: $font-small
+
+.i
+	&-season
+		border: $color-clock-center solid 3px
+		width: 42px
+
+
+// Credits
+// ======================================================= //
+
+.credits
+	display: flex
+	flex-direction: row
+	align-items: center
+
+	&-text
+		margin-left: 1.5rem
+
+.png
+	&_inventory
+		height: max-content
+
+
+// Footer
+// ======================================================= //
+
+footer
+	background: $color-tree-dark
+	color: $color-mountain-top
+	@include link-darken($color-textbox)
+
+	text-align: center
+	padding: 2.5rem
+
+.footer-i
+	height: $font-medium
+	vertical-align: middle
+
+.tagline
+	margin-bottom: 1rem
+
+.i
+	&_heart
+		> svg
+			margin-top: 0.5rem
+
+.stack
+	font-family: $font-fallback
+
+	.i
+		margin: 0 0.5rem

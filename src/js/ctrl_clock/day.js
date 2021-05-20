@@ -1,5 +1,5 @@
-import { data } from './clock';
-import { dayDiv } from './control';
+import { data } from './clock.js';
+import { dayDiv } from './control.js';
 
 
 // weekday

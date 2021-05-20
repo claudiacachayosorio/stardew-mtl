@@ -1,4 +1,4 @@
-import { map } from '../map';
+import { map } from '../map.js';
 
 
 // CREATE INNER ELEMENTS

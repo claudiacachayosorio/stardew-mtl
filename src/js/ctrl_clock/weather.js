@@ -1,5 +1,5 @@
-import { season } from './season';
-import { weatherImg } from './control';
+import { season } from './season.js';
+import { weatherImg } from './control.js';
 
 
 // WEATHER TYPES

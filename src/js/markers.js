@@ -1,5 +1,5 @@
-import { map } from './map';
-import { markerData } from './marker_data';
+import { map } from './map.js';
+import { markerData } from './marker_data.js';
 
 
 // CREATE MARKERS

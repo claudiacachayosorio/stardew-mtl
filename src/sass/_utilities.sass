@@ -1,0 +1,36 @@
+@use 'colors'
+
+// Typography
+// ======================================================= //
+
+$font-fallback:	Arial, Helvetica, sans-serif
+$font-main:		'VT323', $font-fallback
+$font-title:	'Londrina Solid', $font-fallback
+
+// 1rem = 10px
+$font-small:	2.5rem
+$font-medium:	3rem
+$font-large:	8rem
+
+
+// Effects
+// ======================================================= //
+
+$filter-shadow:		drop-shadow(1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5))
+$box-shadow:		4px 4px 4px rgba(0, 0, 0, 0.5)
+
+@mixin link-lighten($color)
+	a
+		color: $color
+		transition: color 0.3s
+
+		&:hover
+			color: lighten($color, 15%)
+
+@mixin link-darken($color)
+	a
+		color: $color
+		transition: color 0.3s
+
+		&:hover
+			color: darken($color, 15%)

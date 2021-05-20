@@ -1,8 +1,8 @@
-import initControl from './control';
-import setDay from './day';
-import { setTime, updateClock } from './time';
-import setSeason from './season';
-import setWeather from './weather';
+import initControl from './control.js';
+import setDay from './day.js';
+import { setTime, updateClock } from './time.js';
+import setSeason from './season.js';
+import setWeather from './weather.js';
 
 
 // data

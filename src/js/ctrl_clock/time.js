@@ -1,5 +1,5 @@
-import { data, loadData } from './clock';
-import { timeDiv } from './control';
+import { data, loadData } from './clock.js';
+import { timeDiv } from './control.js';
 
 
 // GET DATA

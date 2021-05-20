@@ -1,5 +1,5 @@
-import { $ } from './colors';
-import { mapCenter } from './marker_data';
+import { $ } from './colors.js';
+import { mapCenter } from './marker_data.js';
 
 
 // map options

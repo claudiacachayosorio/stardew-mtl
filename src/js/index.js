@@ -1,7 +1,7 @@
-import initMap from './map';
-import initMarkers from './markers';
-import initRecenter from './ctrl_recenter';
-import initClock from './ctrl_clock/clock';
+import initMap from './map.js';
+import initMarkers from './markers.js';
+import initRecenter from './ctrl_recenter.js';
+import initClock from './ctrl_clock/clock.js';
 
 initMap();
 initMarkers();

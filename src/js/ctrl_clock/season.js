@@ -1,6 +1,6 @@
-import { data } from'./clock';
-import { date } from './day';
-import { seasonImg } from './control';
+import { data } from'./clock.js';
+import { date } from './day.js';
+import { seasonImg } from './control.js';
 
 
 // current season
