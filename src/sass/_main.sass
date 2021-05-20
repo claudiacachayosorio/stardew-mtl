@@ -27,6 +27,8 @@ li
 a
 	text-decoration: none
 
+.i
+	filter: $filter-shadow
 
 // control icons sizes with container
 .i svg, .i a
@@ -40,8 +42,10 @@ a
 main
 	background-color: $color-bg-dark
 	background: linear-gradient($color-bg-darker, $color-bg-dark, $color-bg-medium, $color-bg-light, $color-bg-lighter)
-	@include link-lighten($color-textbox-border-outer)
 	padding: 5% 10%
+
+	a
+		@include link-lighten($color-textbox-border-outer)
 
 h1
 	font-family: $font-title
@@ -75,6 +79,7 @@ h1
 
 .png
 	&_bus
+		filter: $filter-shadow
 		height: 2rem
 		vertical-align: middle
 
@@ -97,6 +102,9 @@ h1
 	&-ul
 		padding-left: 0
 
+	&-li
+		margin: 1rem 0
+
 .li
 	&_nativeland
 		@include marker('bundle_green')
@@ -106,6 +114,14 @@ h1
 
 	&_support
 		@include marker('bundle_orange')
+
+.a
+	&_womenshelter
+		@include link-darken($color-tree)
+	&_friendshipcentre
+		@include link-darken($color-clock-center)
+	&_resiliencemtl
+		@include link-darken($color-heart)
 
 
 // Map
@@ -164,10 +180,11 @@ h1
 footer
 	background: $color-tree-dark
 	color: $color-mountain-top
-	@include link-darken($color-textbox)
-
 	text-align: center
 	padding: 2.5rem
+
+	a
+		@include link-darken($color-textbox)
 
 .footer-i
 	height: $font-medium
