@@ -1,5 +1,5 @@
-import { $ } from './colors.js';
-import { mapCenter } from './marker_data.js';
+import $ from '../sass/_color.module.sass';
+import { mapCenter } from './marker-data.js';
 
 
 // map options

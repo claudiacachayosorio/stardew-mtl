@@ -1,4 +1,4 @@
-import { data, loadData } from './clock.js';
+import { data, loadData } from './control_clock.js';
 import { timeDiv } from './control.js';
 
 

@@ -1,4 +1,4 @@
-import { data } from './clock.js';
+import { data } from './control_clock.js';
 import { dayDiv } from './control.js';
 
 

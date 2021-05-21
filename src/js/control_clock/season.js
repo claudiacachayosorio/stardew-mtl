@@ -1,4 +1,4 @@
-import { data } from'./clock.js';
+import { data } from'./control_clock.js';
 import { date } from './day.js';
 import { seasonImg } from './control.js';
 
