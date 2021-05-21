@@ -50,7 +50,7 @@ function getSeason() {
 
 
 // season icon
-const dir = '../../assets/png/clock/';
+const dir = './assets/';
 function setIcon() {
 	const icon = `${dir}${season}.png`;
 	seasonImg.setAttribute('src', icon);
