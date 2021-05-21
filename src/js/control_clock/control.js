@@ -33,17 +33,6 @@ function setClasses() {
 	seasonImg.className		= 'i-season';
 }
 
-// default content
-const weatherImgSrc = 'assets/png/clock/sun.png';
-const seasonImgSrc	= 'assets/png/clock/spring.png';
-
-function setDefaultContent() {
-	weatherImg.setAttribute('src', weatherImgSrc);
-	seasonImg.setAttribute('src', seasonImgSrc);
-	dayDiv.innerHTML = 'day';
-	timeDiv.innerHTML = 'time';
-}
-
 // elements structure
 function appendElements() {
 	iconsDiv.appendChild(weatherImg);
@@ -60,7 +49,6 @@ function appendElements() {
 // generate inner div
 function createClock() {
 	createElements();
-	setDefaultContent();
 	setClasses();
 	appendElements();
 }

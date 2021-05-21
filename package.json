@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "watch": "webpack --watch",
-    "start": "webpack serve --open",
+    "start": "webpack serve",
     "build": "webpack"
   },
   "dependencies": {
@@ -13,6 +13,8 @@
   "devDependencies": {
     "css-loader": "^5.2.5",
     "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.6.0",
     "sass-loader": "^11.1.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.37.1",

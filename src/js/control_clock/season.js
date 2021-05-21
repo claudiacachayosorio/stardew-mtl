@@ -2,7 +2,6 @@ import { data } from'./clock.js';
 import { date } from './day.js';
 import { seasonImg } from './control.js';
 
-
 // current season
 
 export let season;
@@ -51,16 +50,14 @@ function getSeason() {
 
 
 // season icon
-
-const dir = 'assets/png/clock/';
+const dir = '../../assets/png/clock/';
 function setIcon() {
-	const icon = dir + season + '.png';
+	const icon = `${dir}${season}.png`;
 	seasonImg.setAttribute('src', icon);
 };
 
 
 // set data
-
 export default function setSeason() {
 	getSeason();
 	setIcon();

@@ -1,11 +1,13 @@
 // MARKER CONSTRUCTOR
 
+const dir = '../assets/png/locations/'
+
 class Marker {
 	constructor(title, lat, lng, iconFn, iconWidth, iconHeight) {
 		this.title = title;
 		this.position = { lat, lng };
 		this.icon = {
-			url: `assets/png/locations/${iconFn}.png`,
+			url: `${dir}${iconFn}.png`,
 			scaledSize: { width: iconWidth, height: iconHeight }
 		};
 		this.optimized = false;
