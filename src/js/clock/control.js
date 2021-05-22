@@ -1,7 +1,5 @@
-import { map } from '../map.js';
-
-
-// CREATE INNER ELEMENTS
+import { map } from '../map';
+import setContent from './content';
 
 export let
 	innerDiv,
@@ -20,10 +18,6 @@ function createElements() {
 	seasonImg	= document.createElement('img');
 }
 
-
-// CUSTOMIZE ELEMENTS
-
-// set classes
 function setClasses() {
 	innerDiv.className		= 'map-ctrl clock';
 	dayDiv.className		= 'clock-day';
@@ -33,7 +27,6 @@ function setClasses() {
 	seasonImg.className		= 'i-season';
 }
 
-// elements structure
 function appendElements() {
 	iconsDiv.appendChild(weatherImg);
 	iconsDiv.appendChild(seasonImg);
@@ -43,28 +36,25 @@ function appendElements() {
 	innerDiv.appendChild(timeDiv);
 }
 
-
-// GENERATE CONTAINERS
-
-// generate inner div
-function createClock() {
+function initInnerElements() {
 	createElements();
 	setClasses();
 	appendElements();
 }
 
-// generate outer div
-function createOuterDiv() {
+function initOuterDiv() {
 	const outerDiv = document.createElement('div');
 	outerDiv.appendChild(innerDiv);
 	return outerDiv;
 }
 
-
-// INITIALIZE
-
-export default function initControl() {
-	createClock();
-	const outerDiv = createOuterDiv();
+function initMapControl() {
+	initInnerElements();
+	const outerDiv = initOuterDiv();
 	map.controls[google.maps.ControlPosition.RIGHT_TOP].push(outerDiv);
+}
+
+export default function initClock() {
+	initMapControl();
+	setContent();
 }

@@ -1,5 +1,5 @@
-import { map } from './map.js';
-import { mapCenter, busIcon } from './marker-data.js';
+import { map } from './map';
+import { mapCenter, busIcon } from './marker-data';
 
 
 // HTML ELEMENT
