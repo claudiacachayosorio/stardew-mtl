@@ -33,7 +33,7 @@ function getWeather() {
 
 // ICON
 
-const dir = './assets/';
+const dir = '../../assets/copy/';
 function setIcon(weather) {
 	const icon = `${dir}${weather}.png`;
 	weatherImg.setAttribute('src', icon);
