@@ -81,7 +81,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 // MARKER CONSTRUCTOR
 
-const dir = '../assets/copy/';
+const dir = './assets/';
 
 class Marker {
 	constructor(title, lat, lng, iconFn, iconWidth, iconHeight) {
@@ -522,7 +522,7 @@ function updateTime() {
 
 // Images
 
-const pngDir = '../../assets/copy/';
+const pngDir = './assets/';
 
 // Season image
 

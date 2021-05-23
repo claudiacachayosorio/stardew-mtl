@@ -22,7 +22,7 @@ module.exports = {
 		new MiniCssExtractPlugin(),
 		new CopyPlugin({
 			patterns: [
-				{ from: './src/assets/png/**/*.png', to: 'assets/copy/[name].png' },
+				{ from: './src/assets/png/**/*.png', to: 'assets/[name].png' },
 			],
 		}),
 	],
@@ -30,7 +30,7 @@ module.exports = {
 		filename: '[name].js',
 		path: path.resolve(__dirname, 'docs'),
 		clean: true,
-		assetModuleFilename: 'assets/load/[hash][ext][query]',
+		assetModuleFilename: 'assets/[hash][ext][query]',
 	},
 	module: {
 		rules: [
