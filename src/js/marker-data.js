@@ -1,6 +1,6 @@
 // MARKER CONSTRUCTOR
 
-const dir = '../assets/copy/';
+const dir = './assets/copy/';
 
 class Marker {
 	constructor(title, lat, lng, iconFn, iconWidth, iconHeight) {

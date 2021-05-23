@@ -75,7 +75,7 @@ function updateTime() {
 
 // Images
 
-const pngDir = '../../assets/copy/';
+const pngDir = './assets/copy/';
 
 // Season image
 
