@@ -11,7 +11,7 @@ module.exports = {
 	mode: 'none',
 	devtool: 'source-map',
 	devServer: {
-		contentBase: './dist',
+		contentBase: './docs',
 		open: false,
 	},
 	plugins: [
@@ -28,7 +28,7 @@ module.exports = {
 	],
 	output: {
 		filename: '[name].js',
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'docs'),
 		clean: true,
 		assetModuleFilename: 'assets/load/[hash][ext][query]',
 	},
