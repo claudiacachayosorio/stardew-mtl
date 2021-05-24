@@ -1,6 +1,6 @@
 # Stardew MTL
 
-Simple static website built with plain JavaScript and Sass. The customized map is generated with Google Maps JavaScript API.
+Static website displaying a map of Montreal customized with a Stardew Valley theme. Built with Google Maps JavaScript API and Sass.
 
 This is my take on this [DevProjects prompt](https://www.codementor.io/projects/web/build-a-custom-google-maps-theme-bf8levr6eg) by [Jessica Chan](https://coder-coder.com/).
 
@@ -11,9 +11,9 @@ This is my take on this [DevProjects prompt](https://www.codementor.io/projects/
 All Stardew Valley images are from the [Stardew Valley Wiki](https://stardewvalleywiki.com/Category:Images).
 
 ### Icons
-* [Noun Project:](https://thenounproject.com) Heart by Bohdan Burmich
-* [Icons8:](https://icons8.com) Google Maps
-* [Font Awesome:](https://fontawesome.com) JavaScript & GitHub
+* [Noun Project](https://thenounproject.com) Heart by Bohdan Burmich
+* [Icons8](https://icons8.com) Google Maps
+* [Font Awesome](https://fontawesome.com) JavaScript & GitHub
 
 ### Fonts
 * [VT323](https://fonts.google.com/specimen/VT323) by Peter Hull
