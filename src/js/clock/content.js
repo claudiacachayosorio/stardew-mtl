@@ -1,6 +1,5 @@
 import { dayDiv, timeDiv, seasonImg, weatherImg } from './control';
 
-
 let data;
 function loadData() {
 	data = new Date();
@@ -10,29 +9,22 @@ function loadData() {
 // Day div content - Day. DD
 
 function getWeekDay() {
-	const weekdayInt = data.getDay();
-	switch(weekdayInt) {
-		case 0:
-			return 'Sun';
-		case 1:
-			return 'Mon';
-		case 2:
-			return 'Tue';
-		case 3:
-			return 'Wed';
-		case 4:
-			return 'Thu';
-		case 5:
-			return 'Fri';
-		case 6:
-			return 'Sat';
-	}
+	const arr = [
+		'sun', 'mon', 'tue', 'thu', 'wed', 'fri', 'sat'
+	];
+	const int = data.getDay();
+	return arr[int];
 }
+
+// Capitalize first letter
+const formatWeekDay = str => str.charAt(0).toUpperCase() + str.slice(1);
 
 let date;
 function setDay() {
 	date = data.getDate();
-	const weekday = getWeekDay();
+	const weekdayStr = getWeekDay();
+	const weekday = formatWeekDay(weekdayStr);
+
 	dayDiv.innerHTML = `${weekday}. ${date}`;
 }
 
@@ -74,7 +66,6 @@ function updateTime() {
 
 
 // Images
-
 const pngDir = './assets/';
 
 // Season image
@@ -82,42 +73,28 @@ const pngDir = './assets/';
 let season;
 function getSeason() {
 	const month = data.getMonth();
+	const arr = [ 'winter', 'spring', 'summer', 'fall' ];
+
 	switch (month) {
-		case 0: //jan
-			return season = 'winter';
-		case 1: //feb
-			return season = 'winter';
-		case 2: //mar
-			return date < 21
-				? season = 'winter'
-				: season = 'spring';
+		case 11:	//dec
+		case 0:		//jan
+		case 1:		//feb
+			return season = arr[0];
+	
+		case 2:		//mar
+		case 3:		//apr
+		case 4:		//may
+			return season = arr[1];
+	
+		case 5:		//jun
+		case 6:		//jul
+		case 7:		//aug
+			return season = arr[2];
 
-		case 3: //apr
-			return season = 'spring';
-		case 4: //may
-			return season = 'spring';
-		case 5: //jun
-			return date < 21
-				? season = 'spring'
-				: season = 'summer';
-
-		case 6: //jul
-			return season = 'summer';
-		case 7: //aug
-			return season = 'summer';
-		case 8: //sep
-			return date < 21
-				? season = 'summer'
-				: season = 'fall';
-
-		case 9: //oct
-			return season = 'fall';
-		case 10: //nov
-			return season = 'fall';
-		case 11: //dec
-			return date < 21
-				? season = 'fall'
-				: season = 'winter';
+		case 8:		//sep
+		case 9:		//oct
+		case 10:	//nov
+			return season = arr[3];
 	}
 }
 
