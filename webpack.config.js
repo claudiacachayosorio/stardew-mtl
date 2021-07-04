@@ -6,8 +6,7 @@ const
 
 module.exports = {
 	entry: {
-		index: './src/js/index.js',
-		colors: './src/js/colors.js'
+		index: './src/js/index.js'
 	},
 	mode: 'none',
 	devtool: 'source-map',
