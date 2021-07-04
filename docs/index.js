@@ -15,11 +15,12 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "mapCenter": () => (/* binding */ mapCenter),
 /* harmony export */   "map": () => (/* binding */ map),
 /* harmony export */   "default": () => (/* binding */ initMap)
 /* harmony export */ });
 /* harmony import */ var _data_colors_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
-/* harmony import */ var _marker_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
+/* harmony import */ var _markers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
 
 
 
@@ -43,8 +44,10 @@ const styles = [
 	{ featureType: 'transit.station.airport',			stylers: [{ color: _data_colors_json__WEBPACK_IMPORTED_MODULE_0__.pavement }] },
 ];
 
+const mapCenter = _markers__WEBPACK_IMPORTED_MODULE_1__.busMarker.position;
+
 const mapOptions = {
-	center: _marker_data__WEBPACK_IMPORTED_MODULE_1__.mapCenter,
+	center: mapCenter,
 	zoom: 14,
 	disableDefaultUI: true,
 	styles: styles
@@ -70,195 +73,75 @@ module.exports = JSON.parse('{"text":"#3c262b","title":"#e7b012","frame":"#923e0
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "mapCenter": () => (/* binding */ mapCenter),
-/* harmony export */   "busIcon": () => (/* binding */ busIcon),
-/* harmony export */   "markerData": () => (/* binding */ markerData)
-/* harmony export */ });
-// MARKER CONSTRUCTOR
-
-const dir = './assets/';
-
-class Marker {
-	constructor(title, lat, lng, iconFn, iconWidth, iconHeight) {
-		this.title = title;
-		this.position = { lat, lng };
-		this.icon = {
-			url: `${dir}${iconFn}.png`,
-			scaledSize: { width: iconWidth, height: iconHeight }
-		};
-		this.optimized = false;
-	}
-};
-
-// icon scaling
-const defaultHeight = 90;
-const scaleWidth = (pngWidth, pngHeight) => pngWidth / pngHeight * defaultHeight;
-
-
-// MAP STARTING POINT
-
-const startingPoint = new Marker(
-	"Welcome!",
-	45.446387508733245, -73.7414325471116,
-	'bus',
-	512/6, 255/6
-);
-
-const mapCenter = startingPoint.position;
-const busIcon = startingPoint.icon.url;
-
-
-// ALL MARKERS
-//- title
-//- lat, lng
-//- iconFn
-//- iconWidth, iconHeight
-
-const markerData = [
-	startingPoint,
-
-	new Marker(
-		"Montréal-Trudeau Airport",
-		45.466151244756595, -73.7456076958713,
-		'jojamart',
-		scaleWidth(384, 312), defaultHeight
-	),
-
-	new Marker(
-		"Cra-terre Garden",
-		45.52658588605292, -73.6171524003503,
-		'witchs_hut',
-		scaleWidth(336, 279), defaultHeight
-	),
-
-	new Marker(
-		"Montréal, arts interculturels",
-		45.51153320551439, -73.5761720027772,
-		'oasis',
-		scaleWidth(508, 664), defaultHeight
-	),
-
-	new Marker(
-		"Jean-Talon Market",
-		45.536395052797445, -73.61421428613065,
-		'pierres_shop',
-		scaleWidth(322, 320), defaultHeight
-	),
-
-	new Marker(
-		"Place Versailles",
-		45.59255738667644, -73.54073498928062,
-		'hat_shop',
-		scaleWidth(508, 535), defaultHeight
-	),
-
-	new Marker(
-		"Biodôme",
-		45.5597821824346, -73.54994420832364,
-		'leahs_cottage',
-		scaleWidth(447, 378), defaultHeight
-	),
-
-	new Marker(
-		"Botanical Garden",
-		45.55999426718373, -73.56299817393943,
-		'ranch',
-		scaleWidth(1152, 632), defaultHeight
-	),
-
-	new Marker(
-		"La Fontaine Park",
-		45.524517998162835, -73.56850027237539,
-		'coop',
-		scaleWidth(384, 436), defaultHeight
-	),
-
-	new Marker(
-		"Jarry Park",
-		45.53425977877009, -73.6283952866005,
-		'trailer_large',
-		scaleWidth(384, 399), defaultHeight
-	),
-
-	new Marker(
-		"Racines Bookstore",
-		45.53630158476484, -73.60382224510487,
-		'community_center',
-		scaleWidth(384, 320), defaultHeight
-	),
-
-	new Marker(
-		"L'Euguélionne Bookstore",
-		45.51898338320269, -73.55640264135363,
-		'saloon',
-		scaleWidth(396, 435), defaultHeight
-	),
-
-	new Marker(
-		"Grande Bibliothèque",
-		45.51524100060111, -73.56165316127093,
-		'mayors_manor',
-		scaleWidth(576, 896), defaultHeight
-	),
-
-	new Marker(
-		"Museum of Fine Arts",
-		45.498528203258694, -73.57947864398147,
-		'museum',
-		scaleWidth(576, 512), defaultHeight
-	),
-
-	new Marker(
-		"SPCA Montréal",
-		45.496031389370245, -73.65200322848719,
-		'1_river_road',
-		scaleWidth(568, 640), defaultHeight
-	),
-
-	new Marker(
-		"Mont Royal",
-		45.506321671332806, -73.58794237518575,
-		'tent',
-		scaleWidth(192, 384), defaultHeight
-	),
-
-	new Marker(
-		"Science Centre",
-		45.50516360342, -73.55034073496597,
-		'elliotts_cabin',
-		scaleWidth(320, 448), defaultHeight
-	),
-
-	new Marker(
-		"Old Port",
-		45.51540682467202, -73.54669927023373,
-		'fish_shop',
-		scaleWidth(444, 459), defaultHeight
-	),
-];
-
-/***/ }),
-/* 5 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "busMarker": () => (/* binding */ busMarker),
 /* harmony export */   "default": () => (/* binding */ initMarkers)
 /* harmony export */ });
 /* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
-/* harmony import */ var _marker_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
+/* harmony import */ var _data_markers_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
 
 
+
+
+// FORMAT DATA
+
+function getIconUrl(iconFn) {
+	const dir = './assets';
+	return `${dir}${iconFn}.png`;
+}
+
+function scaleBus(pngWidth, pngHeight) {
+	return {
+		width: pngWidth / 6,
+		height: pngHeight / 6
+	}
+}
+
+function scaleIcon(pngWidth, pngHeight) {
+	const defaultHeight = 90;
+	return {
+		width: pngWidth / pngHeight * defaultHeight,
+		height: defaultHeight
+	}
+}
+
+// starting point
+
+function formatStartingPoint(dataArr) {
+	const starter = dataArr[0];
+	starter.icon = {
+		url: getIconUrl(starter.icon.fn),
+		scaledSize: scaleBus(starter.icon.width, starter.icon.height)
+	};
+	starter.optimized = false;
+	return starter;
+}
+
+const busMarker = formatStartingPoint(_data_markers_json__WEBPACK_IMPORTED_MODULE_1__);
+
+// all markers
+
+function formatMarkers(dataArr) {
+	formatStartingPoint(dataArr);
+	for (let i = 1; i < dataArr.length; i++) {
+		const marker = dataArr[i];
+		marker.icon = {
+			url: getIconUrl(marker.icon.fn),
+			scaledSize: scaleIcon(marker.icon.width, marker.icon.height)
+		};
+		marker.optimized = false;
+	}
+}
 
 
 // CREATE MARKERS
 
 let markers = [];
 
-// data array => Marker obj
+// data array => marker obj
 function generateMarkers() {
-	_marker_data__WEBPACK_IMPORTED_MODULE_1__.markerData.forEach(data => {
-		const marker = new google.maps.Marker(data);
+	const markerData = formatMarkers(_data_markers_json__WEBPACK_IMPORTED_MODULE_1__);
+	markerData.forEach(obj => {
+		const marker = new google.maps.Marker(obj);
 		marker.setMap(_map__WEBPACK_IMPORTED_MODULE_0__.map);
 		markers.push(marker);
 	});
@@ -302,6 +185,12 @@ function initMarkers() {
 };
 
 /***/ }),
+/* 5 */
+/***/ ((module) => {
+
+module.exports = JSON.parse('[{"title":"Welcome!","position":{"lat":45.446387508733245,"lng":-73.7414325471116},"icon":{"fn":"bus","width":512,"height":255}},{"title":"Montréal-Trudeau Airport","position":{"lat":45.466151244756595,"lng":-73.7456076958713},"icon":{"fn":"jojamart","width":384,"height":312}},{"title":"Cra-terre Garden","position":{"lat":45.52658588605292,"lng":-73.6171524003503},"icon":{"fn":"witchs_hut","width":336,"height":279}},{"title":"Biodôme","position":{"lat":45.5597821824346,"lng":-73.54994420832364},"icon":{"fn":"leahs_cottage","width":447,"height":378}},{"title":"Botanical Garden","position":{"lat":45.55999426718373,"lng":-73.56299817393943},"icon":{"fn":"ranch","width":1152,"height":632}},{"title":"Grande Bibliothèque","position":{"lat":45.51524100060111,"lng":-73.56165316127093},"icon":{"fn":"mayors_manor","width":576,"height":896}},{"title":"Jarry Park","position":{"lat":45.53425977877009,"lng":-73.6283952866005},"icon":{"fn":"trailer_large","width":384,"height":399}},{"title":"Jean-Talon Market","position":{"lat":45.536395052797445,"lng":-73.61421428613065},"icon":{"fn":"pierres_shop","width":322,"height":320}},{"title":"La Fontaine Park","position":{"lat":45.524517998162835,"lng":-73.56850027237539},"icon":{"fn":"coop","width":384,"height":436}},{"title":"L\'Euguélionne Bookstore","position":{"lat":45.51898338320269,"lng":-73.55640264135363},"icon":{"fn":"saloon","width":396,"height":435}},{"title":"Montréal, arts interculturels","position":{"lat":45.51153320551439,"lng":-73.5761720027772},"icon":{"fn":"oasis","width":508,"height":664}},{"title":"Mont Royal","position":{"lat":45.506321671332806,"lng":-73.58794237518575},"icon":{"fn":"tent","width":192,"height":384}},{"title":"Museum of Fine Arts","position":{"lat":45.498528203258694,"lng":-73.57947864398147},"icon":{"fn":"museum","width":576,"height":512}},{"title":"Old port","position":{"lat":45.51540682467202,"lng":-73.54669927023373},"icon":{"fn":"fish_shop","width":444,"height":459}},{"title":"Place Versailles","position":{"lat":45.59255738667644,"lng":-73.54073498928062},"icon":{"fn":"hat_shop","width":508,"height":535}},{"title":"Racines Bookstore","position":{"lat":45.53630158476484,"lng":-73.60382224510487},"icon":{"fn":"community_center","width":384,"height":320}},{"title":"SPCA Montréal","position":{"lat":45.496031389370245,"lng":-73.65200322848719},"icon":{"fn":"1_river_road","width":568,"height":640}},{"title":"Science Center","position":{"lat":45.50516360342,"lng":-73.55034073496597},"icon":{"fn":"elliotts_cabin","width":320,"height":448}}]');
+
+/***/ }),
 /* 6 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -310,7 +199,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ initRecenter)
 /* harmony export */ });
 /* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
-/* harmony import */ var _marker_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
+/* harmony import */ var _markers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
 
 
 
@@ -319,12 +208,12 @@ __webpack_require__.r(__webpack_exports__);
 
 const img = document.createElement('img');
 
-img.setAttribute('src', _marker_data__WEBPACK_IMPORTED_MODULE_1__.busIcon);
+img.setAttribute('src', _markers__WEBPACK_IMPORTED_MODULE_1__.busMarker.icon.url);
 img.className = 'map-ctrl recenter i'
 img.hidden = true;
 
 // functionality
-const handleClick = () => _map__WEBPACK_IMPORTED_MODULE_0__.map.setCenter(_marker_data__WEBPACK_IMPORTED_MODULE_1__.mapCenter);
+const handleClick = () => _map__WEBPACK_IMPORTED_MODULE_0__.map.setCenter(_map__WEBPACK_IMPORTED_MODULE_0__.mapCenter);
 img.addEventListener('click', handleClick);
 
 
@@ -337,7 +226,7 @@ function createControl() {
 }
 
 // mapCenter coordinates => LatLng obj
-const centerLatLng = new google.maps.LatLng(_marker_data__WEBPACK_IMPORTED_MODULE_1__.mapCenter);
+const centerLatLng = new google.maps.LatLng(_map__WEBPACK_IMPORTED_MODULE_0__.mapCenter);
 
 // toggle hidden attr if mapCenter is out of current bounds
 function handleChange() {
@@ -660,7 +549,7 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sass_index_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var _markers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
+/* harmony import */ var _markers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
 /* harmony import */ var _recenter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
 /* harmony import */ var _clock_control__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7);
 // Assets

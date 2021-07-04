@@ -1,5 +1,5 @@
 import $ from '../data/colors.json';
-import { mapCenter } from './marker-data';
+import { busMarker } from './markers';
 
 
 // map options
@@ -20,6 +20,8 @@ const styles = [
 	{ featureType: 'road.highway.controlled_access',	stylers: [{ color: $["road"] }] },
 	{ featureType: 'transit.station.airport',			stylers: [{ color: $["pavement"] }] },
 ];
+
+export const mapCenter = busMarker.position;
 
 const mapOptions = {
 	center: mapCenter,

@@ -1,12 +1,12 @@
-import { map } from './map';
-import { mapCenter, busIcon } from './marker-data';
+import { map, mapCenter } from './map';
+import { busMarker } from './markers';
 
 
 // HTML ELEMENT
 
 const img = document.createElement('img');
 
-img.setAttribute('src', busIcon);
+img.setAttribute('src', busMarker.icon.url);
 img.className = 'map-ctrl recenter i'
 img.hidden = true;
 

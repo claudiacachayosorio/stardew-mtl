@@ -1,15 +1,67 @@
 import { map } from './map';
-import { markerData } from './marker-data';
+import data from '../data/markers.json';
+
+
+// FORMAT DATA
+
+function getIconUrl(iconFn) {
+	const dir = './assets/';
+	return `${dir}${iconFn}.png`;
+}
+
+function scaleBus(pngWidth, pngHeight) {
+	return {
+		width: pngWidth / 6,
+		height: pngHeight / 6
+	}
+}
+
+function scaleIcon(pngWidth, pngHeight) {
+	const defaultHeight = 90;
+	return {
+		width: pngWidth / pngHeight * defaultHeight,
+		height: defaultHeight
+	}
+}
+
+// starting point
+
+function formatStartingPoint(dataArr) {
+	const starter = dataArr[0];
+	starter.icon = {
+		url: getIconUrl(starter.icon.fn),
+		scaledSize: scaleBus(starter.icon.width, starter.icon.height)
+	};
+	starter.optimized = false;
+	return starter;
+}
+
+export const busMarker = formatStartingPoint(data);
+
+// all markers
+
+function formatMarkers(dataArr) {
+	for (let i = 1; i < dataArr.length; i++) {
+		const marker = dataArr[i];
+		marker.icon = {
+			url: getIconUrl(marker.icon.fn),
+			scaledSize: scaleIcon(marker.icon.width, marker.icon.height)
+		};
+		marker.optimized = false;
+	}
+	return dataArr;
+}
 
 
 // CREATE MARKERS
 
 let markers = [];
 
-// data array => Marker obj
+// data array => marker obj
 function generateMarkers() {
-	markerData.forEach(data => {
-		const marker = new google.maps.Marker(data);
+	formatMarkers(data);
+	data.forEach(obj => {
+		const marker = new google.maps.Marker(obj);
 		marker.setMap(map);
 		markers.push(marker);
 	});
