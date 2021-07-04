@@ -11,6 +11,12 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 2 */
+/***/ ((module) => {
+
+module.exports = JSON.parse('{"text":"#3c262b","title":"#e7b012","frame":"#923e08","heart":"#d93500","bg-light":"#5edceb","bg-lighter":"#93fedb","bg-medium":"#259bfd","bg-dark":"#0261bb","bg-darker":"#023b7e","textbox":"#fdbd6f","textbox-dark":"#d8a06f","textbox-border":"#fa9305","textbox-border-inner":"#b14e05","textbox-border-outer":"#853605","soil":"#e9d65d","soil-dark":"#e5bb51","soil-darker":"#e09947","pavement":"#66797f","pavement-light":"#6c996e","road":"#485b4c","road-border":"#324135","road-marking":"#607966","grass":"#40c51b","grass-dark":"#3ea031","water":"#3c82c3","water-light":"#49ccdd","water-dark":"#37549e","tree":"#0d7e2c","tree-light":"#12a92b","tree-dark":"#09543b","wood":"#775c25","cliff":"#787843","cliff-light":"#8e8e55","cliff-dark":"#686023","cliff-darker":"#544d39","mountain":"#acbe9a","mountain-dark":"#799e88","mountain-top":"#dde0ee","mountain-top-dark":"#bdc2da","mountain-border":"#576196","clock":"#ffd787","clock-border":"#f7ba00","clock-center":"#dc7b05","clock-center-border":"#f7ba00"}');
+
+/***/ }),
+/* 3 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -19,7 +25,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "map": () => (/* binding */ map),
 /* harmony export */   "default": () => (/* binding */ initMap)
 /* harmony export */ });
-/* harmony import */ var _data_colors_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var _data_colors_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var _markers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
 
 
@@ -62,12 +68,6 @@ function initMap() {
 };
 
 /***/ }),
-/* 3 */
-/***/ ((module) => {
-
-module.exports = JSON.parse('{"text":"#3c262b","title":"#e7b012","frame":"#923e08","heart":"#d93500","bg-light":"#5edceb","bg-lighter":"#93fedb","bg-medium":"#259bfd","bg-dark":"#0261bb","bg-darker":"#023b7e","textbox":"#fdbd6f","textbox-dark":"#d8a06f","textbox-border":"#fa9305","textbox-border-inner":"#b14e05","textbox-border-outer":"#853605","soil":"#e9d65d","soil-dark":"#e5bb51","soil-darker":"#e09947","pavement":"#66797f","pavement-light":"#6c996e","road":"#485b4c","road-border":"#324135","road-marking":"#607966","grass":"#40c51b","grass-dark":"#3ea031","water":"#3c82c3","water-light":"#49ccdd","water-dark":"#37549e","tree":"#0d7e2c","tree-light":"#12a92b","tree-dark":"#09543b","wood":"#775c25","cliff":"#787843","cliff-light":"#8e8e55","cliff-dark":"#686023","cliff-darker":"#544d39","mountain":"#acbe9a","mountain-dark":"#799e88","mountain-top":"#dde0ee","mountain-top-dark":"#bdc2da","mountain-border":"#576196","clock":"#ffd787","clock-border":"#f7ba00","clock-center":"#dc7b05","clock-center-border":"#f7ba00"}');
-
-/***/ }),
 /* 4 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -76,7 +76,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "busMarker": () => (/* binding */ busMarker),
 /* harmony export */   "default": () => (/* binding */ initMarkers)
 /* harmony export */ });
-/* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var _data_markers_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
 
 
@@ -198,7 +198,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ initRecenter)
 /* harmony export */ });
-/* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var _markers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
 
 
@@ -257,7 +257,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "seasonImg": () => (/* binding */ seasonImg),
 /* harmony export */   "default": () => (/* binding */ initClock)
 /* harmony export */ });
-/* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var _content__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8);
 
 
@@ -548,11 +548,22 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sass_index_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var _markers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
-/* harmony import */ var _recenter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
-/* harmony import */ var _clock_control__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7);
-// Assets
+/* harmony import */ var _data_colors_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var _markers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+/* harmony import */ var _recenter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
+/* harmony import */ var _clock_control__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
+// Styles
+
+
+
+
+function setCSSvars(data) {
+	for (const [name, hex] of Object.entries(data)) {
+		document.documentElement.style.setProperty(`--color-${name}`, hex);
+	}
+}
+setCSSvars(_data_colors_json__WEBPACK_IMPORTED_MODULE_1__);
 
 
 // Map
@@ -560,10 +571,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_map__WEBPACK_IMPORTED_MODULE_1__.default)();
-(0,_markers__WEBPACK_IMPORTED_MODULE_2__.default)();
-(0,_recenter__WEBPACK_IMPORTED_MODULE_3__.default)();
-(0,_clock_control__WEBPACK_IMPORTED_MODULE_4__.default)();
+
+(0,_map__WEBPACK_IMPORTED_MODULE_2__.default)();
+(0,_markers__WEBPACK_IMPORTED_MODULE_3__.default)();
+(0,_recenter__WEBPACK_IMPORTED_MODULE_4__.default)();
+(0,_clock_control__WEBPACK_IMPORTED_MODULE_5__.default)();
 })();
 
 /******/ })()
