@@ -1,0 +1,146 @@
+[
+	{
+		"title": "Welcome!",
+		"lat": 45.446387508733245,
+		"lng": -73.7414325471116,
+		"iconFn": "bus",
+		"iconW": 512,
+		"iconH": 255
+	},
+	{
+		"title": "Montréal-Trudeau Airport",
+		"lat": 45.466151244756595,
+		"lng": -73.7456076958713,
+		"iconFn": "jojamart",
+		"iconW": 384,
+		"iconH": 312
+	},
+	{
+		"title": "Cra-terre Garden",
+		"lat": 45.52658588605292,
+		"lng": -73.6171524003503,
+		"iconFn": "witchs_hut",
+		"iconW": 336,
+		"iconH": 279
+	},
+	{
+		"title": "Biodôme",
+		"lat": 45.5597821824346,
+		"lng": -73.54994420832364,
+		"iconFn": "leahs_cottage",
+		"iconW": 447,
+		"iconH": 378
+	},
+	{
+		"title": "Botanical Garden",
+		"lat": 45.55999426718373,
+		"lng": -73.56299817393943,
+		"iconFn": "ranch",
+		"iconW": 1152,
+		"iconH": 632
+	},
+	{
+		"title": "Grande Bibliothèque",
+		"lat": 45.51524100060111,
+		"lng": -73.56165316127093,
+		"iconFn": "mayors_manor",
+		"iconW": 576,
+		"iconH": 896
+	},
+	{
+		"title": "Jarry Park",
+		"lat": 45.53425977877009,
+		"lng": -73.6283952866005,
+		"iconFn": "trailer_large",
+		"iconW": 384,
+		"iconH": 399
+	},
+	{
+		"title": "Jean-Talon Market",
+		"lat": 45.536395052797445,
+		"lng": -73.61421428613065,
+		"iconFn": "pierres_shop",
+		"iconW": 322,
+		"iconH": 320
+	},
+	{
+		"title": "La Fontaine Park",
+		"lat": 45.524517998162835,
+		"lng": -73.56850027237539,
+		"iconFn": "coop",
+		"iconW": 384,
+		"iconH": 436
+	},
+	{
+		"title": "L'Euguélionne Bookstore",
+		"lat": 45.51898338320269,
+		"lng": -73.55640264135363,
+		"iconFn": "saloon",
+		"iconW": 396,
+		"iconH": 435
+	},
+	{
+		"title": "Montréal, arts interculturels",
+		"lat": 45.51153320551439,
+		"lng": -73.5761720027772,
+		"iconFn": "oasis",
+		"iconW": 508,
+		"iconH": 664
+	},
+	{
+		"title": "Mont Royal",
+		"lat": 45.506321671332806,
+		"lng": -73.58794237518575,
+		"iconFn": "tent",
+		"iconW": 192,
+		"iconH": 384
+	},
+	{
+		"title": "Museum of Fine Arts",
+		"lat": 45.498528203258694,
+		"lng": -73.57947864398147,
+		"iconFn": "museum",
+		"iconW": 576,
+		"iconH": 512
+	},
+	{
+		"title": "Old port",
+		"lat": 45.51540682467202,
+		"lng": -73.54669927023373,
+		"iconFn": "fish_shop",
+		"iconW": 444,
+		"iconH": 459
+	},
+	{
+		"title": "Place Versailles",
+		"lat": 45.59255738667644,
+		"lng": -73.54073498928062,
+		"iconFn": "hat_shop",
+		"iconW": 508,
+		"iconH": 535
+	},
+	{
+		"title": "Racines Bookstore",
+		"lat": 45.53630158476484,
+		"lng": -73.60382224510487,
+		"iconFn": "community_center",
+		"iconW": 384,
+		"iconH": 320
+	},
+	{
+		"title": "SPCA Montréal",
+		"lat": 45.496031389370245,
+		"lng": -73.65200322848719,
+		"iconFn": "1_river_road",
+		"iconW": 568,
+		"iconH": 640
+	},
+	{
+		"title": "Science Center",
+		"lat": 45.50516360342,
+		"lng": -73.55034073496597,
+		"iconFn": "elliotts_cabin",
+		"iconW": 320,
+		"iconH": 448
+	}
+]
