@@ -1,5 +1,4 @@
 @use 'utilities'as *
-@use 'color.module'
 
 
 // Settings
@@ -19,7 +18,7 @@ html
 		font-size: 8px
 
 body
-	color: color.$text
+	color: var(--color-text)
 	font-family: $font-main
 	font-size: $font-medium
 	line-height: 1.2
@@ -29,6 +28,10 @@ li
 
 a
 	text-decoration: none
+	transition: filter 0.3s
+
+	&:hover
+		filter: saturate(200%)
 
 .i
 	filter: $filter-shadow
@@ -43,17 +46,17 @@ a
 // ======================================================= //
 
 main
-	background-color: color.$bg-dark
-	background: linear-gradient(color.$bg-darker, color.$bg-dark, color.$bg-medium, color.$bg-light, color.$bg-lighter)
+	background-color: var(--color-bg-dark)
+	background: linear-gradient(var(--color-bg-darker), var(--color-bg-dark), var(--color-bg-medium), var(--color-bg-light), var(--color-bg-lighter))
 	padding: 5% 10%
 
 	a
-		@include link-lighten(color.$textbox-border-outer)
+		color: var(--color-textbox-border-outer)
 
 h1
 	font-family: $font-title
 	font-size: $font-large
-	color: color.$title
+	color: var(--color-title)
 	text-shadow: $box-shadow
 
 	text-transform: uppercase
@@ -123,18 +126,18 @@ h1
 
 .a
 	&_womenshelter
-		@include link-darken(color.$tree)
+		color: var(--color-tree)
 	&_friendshipcentre
-		@include link-darken(color.$clock-center)
+		color: var(--color-clock-center)
 	&_resiliencemtl
-		@include link-darken(color.$heart)
+		color: var(--color-heart)
 
 
 // Map
 // ======================================================= //
 
 .map
-	border: color.$frame solid 10px
+	border: var(--color-frame) solid 10px
 	border-radius: 8px
 	box-shadow: $box-shadow
 
@@ -151,8 +154,8 @@ h1
 	filter: drop-shadow($box-shadow)
 
 .clock
-	background-color: color.$clock
-	border: color.$clock-border solid 10px
+	background-color: var(--color-clock)
+	border: var(--color-clock-border) solid 10px
 	box-shadow: $box-shadow
 
 	font-family: $font-main
@@ -160,7 +163,7 @@ h1
 
 .i
 	&-season
-		border: color.$clock-center solid 3px
+		border: var(--color-clock-center) solid 3px
 		width: 42px
 
 
@@ -184,13 +187,13 @@ h1
 // ======================================================= //
 
 footer
-	background: color.$tree-dark
-	color: color.$mountain-top
+	background: var(--color-tree-dark)
+	color: var(--color-mountain-top)
 	text-align: center
 	padding: 2.5rem
 
 	a
-		@include link-darken(color.$textbox)
+		color: var(--color-textbox)
 
 .footer-i
 	height: $font-medium

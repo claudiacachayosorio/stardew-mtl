@@ -7,6 +7,7 @@ const
 module.exports = {
 	entry: {
 		index: './src/js/index.js',
+		colors: './src/js/colors.js'
 	},
 	mode: 'none',
 	devtool: 'source-map',
@@ -49,7 +50,7 @@ module.exports = {
 			{
 				test: /\.(png|svg|jpg|gif)$/i,
 				type: 'asset/resource',
-			},
+			}
 		],
 	},
 };

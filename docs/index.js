@@ -18,7 +18,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "map": () => (/* binding */ map),
 /* harmony export */   "default": () => (/* binding */ initMap)
 /* harmony export */ });
-/* harmony import */ var _sass_color_module_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var _data_colors_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var _marker_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
 
 
@@ -32,15 +32,15 @@ const styles = [
 	{ featureType: 'transit.line',						stylers: [{ visibility: 'off' }] },
 	{ featureType: 'transit.station.rail',				stylers: [{ visibility: 'off' }] },
 
-	{ featureType: 'all',								stylers: [{ color: _sass_color_module_sass__WEBPACK_IMPORTED_MODULE_0__.default.soildark }] },
-	{ featureType: 'landscape',							stylers: [{ color: _sass_color_module_sass__WEBPACK_IMPORTED_MODULE_0__.default.grass }] },
-	{ featureType: 'water',								stylers: [{ color: _sass_color_module_sass__WEBPACK_IMPORTED_MODULE_0__.default.water }] },
-	{ featureType: 'poi',								stylers: [{ color: _sass_color_module_sass__WEBPACK_IMPORTED_MODULE_0__.default.pavement }] },
-	{ featureType: 'poi.park',							stylers: [{ color: _sass_color_module_sass__WEBPACK_IMPORTED_MODULE_0__.default.grassdark }] },
-	{ featureType: 'road.arterial',						stylers: [{ color: _sass_color_module_sass__WEBPACK_IMPORTED_MODULE_0__.default.soil }] },
-	{ featureType: 'road.highway',						stylers: [{ color: _sass_color_module_sass__WEBPACK_IMPORTED_MODULE_0__.default.roadmarking }] },
-	{ featureType: 'road.highway.controlled_access',	stylers: [{ color: _sass_color_module_sass__WEBPACK_IMPORTED_MODULE_0__.default.road }] },
-	{ featureType: 'transit.station.airport',			stylers: [{ color: _sass_color_module_sass__WEBPACK_IMPORTED_MODULE_0__.default.pavement }] },
+	{ featureType: 'all',								stylers: [{ color: _data_colors_json__WEBPACK_IMPORTED_MODULE_0__["soil-dark"] }] },
+	{ featureType: 'landscape',							stylers: [{ color: _data_colors_json__WEBPACK_IMPORTED_MODULE_0__.grass }] },
+	{ featureType: 'water',								stylers: [{ color: _data_colors_json__WEBPACK_IMPORTED_MODULE_0__.water }] },
+	{ featureType: 'poi',								stylers: [{ color: _data_colors_json__WEBPACK_IMPORTED_MODULE_0__.pavement }] },
+	{ featureType: 'poi.park',							stylers: [{ color: _data_colors_json__WEBPACK_IMPORTED_MODULE_0__["grass-dark"] }] },
+	{ featureType: 'road.arterial',						stylers: [{ color: _data_colors_json__WEBPACK_IMPORTED_MODULE_0__.soil }] },
+	{ featureType: 'road.highway',						stylers: [{ color: _data_colors_json__WEBPACK_IMPORTED_MODULE_0__["road-marking"] }] },
+	{ featureType: 'road.highway.controlled_access',	stylers: [{ color: _data_colors_json__WEBPACK_IMPORTED_MODULE_0__.road }] },
+	{ featureType: 'transit.station.airport',			stylers: [{ color: _data_colors_json__WEBPACK_IMPORTED_MODULE_0__.pavement }] },
 ];
 
 const mapOptions = {
@@ -60,14 +60,9 @@ function initMap() {
 
 /***/ }),
 /* 3 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module) => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"soil":"#e9d65d","soildark":"#e5bb51","soildarker":"#e09947","pavement":"#66797f","pavementlight":"#6c996e","road":"#485b4c","roadborder":"#324135","roadmarking":"#607966","grass":"#40c51b","grassdark":"#3ea031","water":"#3c82c3","waterlight":"#49ccdd","waterdark":"#37549e"});
+module.exports = JSON.parse('{"text":"#3c262b","title":"#e7b012","frame":"#923e08","heart":"#d93500","bg-light":"#5edceb","bg-lighter":"#93fedb","bg-medium":"#259bfd","bg-dark":"#0261bb","bg-darker":"#023b7e","textbox":"#fdbd6f","textbox-dark":"#d8a06f","textbox-border":"#fa9305","textbox-border-inner":"#b14e05","textbox-border-outer":"#853605","soil":"#e9d65d","soil-dark":"#e5bb51","soil-darker":"#e09947","pavement":"#66797f","pavement-light":"#6c996e","road":"#485b4c","road-border":"#324135","road-marking":"#607966","grass":"#40c51b","grass-dark":"#3ea031","water":"#3c82c3","water-light":"#49ccdd","water-dark":"#37549e","tree":"#0d7e2c","tree-light":"#12a92b","tree-dark":"#09543b","wood":"#775c25","cliff":"#787843","cliff-light":"#8e8e55","cliff-dark":"#686023","cliff-darker":"#544d39","mountain":"#acbe9a","mountain-dark":"#799e88","mountain-top":"#dde0ee","mountain-top-dark":"#bdc2da","mountain-border":"#576196","clock":"#ffd787","clock-border":"#f7ba00","clock-center":"#dc7b05","clock-center-border":"#f7ba00"}');
 
 /***/ }),
 /* 4 */
@@ -447,7 +442,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _control__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
 
 
-
 let data;
 function loadData() {
 	data = new Date();
@@ -457,29 +451,22 @@ function loadData() {
 // Day div content - Day. DD
 
 function getWeekDay() {
-	const weekdayInt = data.getDay();
-	switch(weekdayInt) {
-		case 0:
-			return 'Sun';
-		case 1:
-			return 'Mon';
-		case 2:
-			return 'Tue';
-		case 3:
-			return 'Wed';
-		case 4:
-			return 'Thu';
-		case 5:
-			return 'Fri';
-		case 6:
-			return 'Sat';
-	}
+	const arr = [
+		'sun', 'mon', 'tue', 'thu', 'wed', 'fri', 'sat'
+	];
+	const int = data.getDay();
+	return arr[int];
 }
+
+// Capitalize first letter
+const formatWeekDay = str => str.charAt(0).toUpperCase() + str.slice(1);
 
 let date;
 function setDay() {
 	date = data.getDate();
-	const weekday = getWeekDay();
+	const weekdayStr = getWeekDay();
+	const weekday = formatWeekDay(weekdayStr);
+
 	_control__WEBPACK_IMPORTED_MODULE_0__.dayDiv.innerHTML = `${weekday}. ${date}`;
 }
 
@@ -521,7 +508,6 @@ function updateTime() {
 
 
 // Images
-
 const pngDir = './assets/';
 
 // Season image
@@ -529,42 +515,28 @@ const pngDir = './assets/';
 let season;
 function getSeason() {
 	const month = data.getMonth();
+	const arr = [ 'winter', 'spring', 'summer', 'fall' ];
+
 	switch (month) {
-		case 0: //jan
-			return season = 'winter';
-		case 1: //feb
-			return season = 'winter';
-		case 2: //mar
-			return date < 21
-				? season = 'winter'
-				: season = 'spring';
+		case 11:	//dec
+		case 0:		//jan
+		case 1:		//feb
+			return season = arr[0];
+	
+		case 2:		//mar
+		case 3:		//apr
+		case 4:		//may
+			return season = arr[1];
+	
+		case 5:		//jun
+		case 6:		//jul
+		case 7:		//aug
+			return season = arr[2];
 
-		case 3: //apr
-			return season = 'spring';
-		case 4: //may
-			return season = 'spring';
-		case 5: //jun
-			return date < 21
-				? season = 'spring'
-				: season = 'summer';
-
-		case 6: //jul
-			return season = 'summer';
-		case 7: //aug
-			return season = 'summer';
-		case 8: //sep
-			return date < 21
-				? season = 'summer'
-				: season = 'fall';
-
-		case 9: //oct
-			return season = 'fall';
-		case 10: //nov
-			return season = 'fall';
-		case 11: //dec
-			return date < 21
-				? season = 'fall'
-				: season = 'winter';
+		case 8:		//sep
+		case 9:		//oct
+		case 10:	//nov
+			return season = arr[3];
 	}
 }
 
