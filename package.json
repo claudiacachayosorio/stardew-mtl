@@ -1,6 +1,5 @@
 {
   "name": "stardew-mtl",
-  "version": "0.1.0",
   "private": true,
   "scripts": {
     "watch": "webpack --watch",
