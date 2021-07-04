@@ -85,7 +85,7 @@ __webpack_require__.r(__webpack_exports__);
 // FORMAT DATA
 
 function getIconUrl(iconFn) {
-	const dir = './assets';
+	const dir = './assets/';
 	return `${dir}${iconFn}.png`;
 }
 
@@ -121,7 +121,6 @@ const busMarker = formatStartingPoint(_data_markers_json__WEBPACK_IMPORTED_MODUL
 // all markers
 
 function formatMarkers(dataArr) {
-	formatStartingPoint(dataArr);
 	for (let i = 1; i < dataArr.length; i++) {
 		const marker = dataArr[i];
 		marker.icon = {
@@ -130,6 +129,7 @@ function formatMarkers(dataArr) {
 		};
 		marker.optimized = false;
 	}
+	return dataArr;
 }
 
 
@@ -139,8 +139,8 @@ let markers = [];
 
 // data array => marker obj
 function generateMarkers() {
-	const markerData = formatMarkers(_data_markers_json__WEBPACK_IMPORTED_MODULE_1__);
-	markerData.forEach(obj => {
+	formatMarkers(_data_markers_json__WEBPACK_IMPORTED_MODULE_1__);
+	_data_markers_json__WEBPACK_IMPORTED_MODULE_1__.forEach(obj => {
 		const marker = new google.maps.Marker(obj);
 		marker.setMap(_map__WEBPACK_IMPORTED_MODULE_0__.map);
 		markers.push(marker);
