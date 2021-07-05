@@ -1,10 +1,11 @@
 const path = require('path');
+require('dotenv').config();
+
+// Plugins
 const HtmlWebpackPlugin		= require('html-webpack-plugin'),
 	  HtmlReplacePlugin		= require('html-replace-webpack-plugin'),
 	  MiniCssExtractPlugin	= require('mini-css-extract-plugin'),
 	  CopyPlugin			= require('copy-webpack-plugin');
-
-require('dotenv').config();
 
 module.exports = {
 	entry: {
