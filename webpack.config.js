@@ -1,8 +1,10 @@
 const path = require('path');
-const
-	HtmlWebpackPlugin		= require('html-webpack-plugin'),
-	MiniCssExtractPlugin	= require('mini-css-extract-plugin'),
-	CopyPlugin				= require('copy-webpack-plugin');
+const HtmlWebpackPlugin		= require('html-webpack-plugin'),
+	  HtmlReplacePlugin		= require('html-replace-webpack-plugin'),
+	  MiniCssExtractPlugin	= require('mini-css-extract-plugin'),
+	  CopyPlugin			= require('copy-webpack-plugin');
+
+require('dotenv').config();
 
 module.exports = {
 	entry: {
@@ -19,6 +21,12 @@ module.exports = {
 			template: './src/index.html',
 			filename: '[name].html',
 		}),
+		new HtmlReplacePlugin([
+			{
+				pattern: 'API_KEY',
+				replacement: process.env.API_KEY
+			}
+		]),
 		new MiniCssExtractPlugin(),
 		new CopyPlugin({
 			patterns: [
