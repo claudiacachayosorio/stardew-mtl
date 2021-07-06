@@ -2,18 +2,16 @@ const path = require('path');
 require('dotenv').config();
 
 // Plugins
-const HTMLWebpackPlugin		= require('html-webpack-plugin'),
-	  HTMLReplacePlugin		= require('html-replace-webpack-plugin'),
-	  MiniCSSExtractPlugin	= require('mini-css-extract-plugin'),
-	  CopyPlugin			= require('copy-webpack-plugin');
+const HtmlWebpackPlugin		= require('html-webpack-plugin'),
+	  HtmlInlineSVGPlugin 	= require('html-webpack-inline-svg-plugin'),
+	  HtmlReplacePlugin		= require('html-replace-webpack-plugin'),
+	  MiniCssExtractPlugin	= require('mini-css-extract-plugin'),
+	  ImageMinimizerPlugin	= require('image-minimizer-webpack-plugin');
 
 // Paths
 const DIR_INPUT		= path.resolve(__dirname, 'src'),
 	  DIR_OUTPUT	= path.resolve(__dirname, 'dist'),
-	  DIR_ASSETS	= path.resolve(__dirname, 'assets'),
-	  DIR_JS		= path.join(DIR_INPUT, 'scripts'),
-	  DIR_CSS		= path.join(DIR_INPUT, 'sass'),
-	  DIR_PNG		= path.join(DIR_ASSETS, 'png');
+	  DIR_JS		= path.join(DIR_INPUT, 'scripts');
 
 
 module.exports = {
@@ -21,7 +19,6 @@ module.exports = {
 	entry: {
 		index: path.join(DIR_JS, 'index.js')
 	},
-
 	output: {
 		filename: '[name].js',
 		path: DIR_OUTPUT,
@@ -31,52 +28,64 @@ module.exports = {
 
 	mode: 'none',
 	devtool: 'source-map',
+	optimization: {
+		minimize: true
+	},
 	devServer: {
 		contentBase: DIR_OUTPUT,
 		open: false
 	},
 
+	module: {
+		rules: [
+			{
+				test: /\.html$/i,
+				loader: 'html-loader'
+			},
+			{
+				test: /\.(c|s[ac])ss$/i,
+				use: [
+					MiniCssExtractPlugin.loader,
+					'css-loader',
+					'postcss-loader',
+					'sass-loader'
+				]
+			},
+			{
+				test: /\.m?js$/,
+				exclude: /node_modules/,
+				use: [
+					'babel-loader'
+				]
+			},
+			{
+				test: /\.(png|svg|jpg|gif)$/i,
+				type: 'asset'
+			}
+		]
+	},
+
 	plugins: [
-		new HTMLWebpackPlugin({
+		new HtmlWebpackPlugin({
 			template: path.join(DIR_INPUT, 'index.html'),
 			filename: '[name].html',
 		}),
-		new HTMLReplacePlugin([
+		new HtmlReplacePlugin([
 			{
 				pattern: 'API_KEY',
 				replacement: process.env.API_KEY
 			}
 		]),
-		new MiniCSSExtractPlugin(),
-		new CopyPlugin({
-			patterns: [
-				{
-					from: '**/*.png',
-					to: 'assets/[name].png'
-				}
-			]
-		})
-	],
-
-	module: {
-		rules: [
-			{
-				test: /\.html$/i,
-				loader: 'html-loader',
-			},
-			{
-				test: /\.s[ac]ss$/i,
-				use: [
-				  MiniCssExtractPlugin.loader,
-				  'css-loader',
-				  'sass-loader',
-				],
-			},
-			{
-				test: /\.(png|svg|jpg|gif)$/i,
-				type: 'asset/resource',
+		new HtmlInlineSVGPlugin(),
+		new MiniCssExtractPlugin(),
+		new ImageMinimizerPlugin({
+			minimizerOptions: {
+				plugins: [
+					'optipng',
+					'svgo'
+				]
 			}
-		]
-	}
+		})
+	]
 
 };

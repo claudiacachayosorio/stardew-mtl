@@ -1,4 +1,6 @@
-import { dayDiv, timeDiv, seasonImg, weatherImg } from './control';
+import {
+	dayDiv, timeDiv, seasonImg, weatherImg
+} from './control';
 
 let data;
 function loadData() {
@@ -66,7 +68,6 @@ function updateTime() {
 
 
 // Images
-const pngDir = './assets/';
 
 // Season image
 
@@ -99,7 +100,7 @@ function getSeason() {
 }
 
 function setSeasonIcon() {
-	const icon = `${pngDir}${season}.png`;
+	const icon = require(`../../assets/png/clock/${season}.png`);
 	seasonImg.setAttribute('src', icon);
 };
 
@@ -131,7 +132,7 @@ function getWeather() {
 }
 
 function setWeatherIcon(weather) {
-	const icon = `${pngDir}${weather}.png`;
+	const icon = require(`../../assets/png/clock/${weather}.png`);
 	weatherImg.setAttribute('src', icon);
 };
 

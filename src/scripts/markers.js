@@ -2,12 +2,7 @@ import { map } from './map';
 import data from '../data/markers.json';
 
 
-// FORMAT DATA
-
-function getIconUrl(iconFn) {
-	const dir = './assets/';
-	return `${dir}${iconFn}.png`;
-}
+// Scale icons
 
 function scaleBus(pngWidth, pngHeight) {
 	return {
@@ -28,8 +23,9 @@ function scaleIcon(pngWidth, pngHeight) {
 
 function formatStartingPoint(dataArr) {
 	const starter = dataArr[0];
+	const png = require(`../assets/png/locations/${starter.icon.fn}.png`);
 	starter.icon = {
-		url: getIconUrl(starter.icon.fn),
+		url: png,
 		scaledSize: scaleBus(starter.icon.width, starter.icon.height)
 	};
 	starter.optimized = false;
@@ -43,8 +39,9 @@ export const busMarker = formatStartingPoint(data);
 function formatMarkers(dataArr) {
 	for (let i = 1; i < dataArr.length; i++) {
 		const marker = dataArr[i];
+		const png = require(`../assets/png/locations/${marker.icon.fn}.png`);
 		marker.icon = {
-			url: getIconUrl(marker.icon.fn),
+			url: png,
 			scaledSize: scaleIcon(marker.icon.width, marker.icon.height)
 		};
 		marker.optimized = false;
