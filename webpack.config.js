@@ -14,6 +14,59 @@ const DIR_INPUT		= path.resolve(__dirname, 'src'),
 	  DIR_JS		= path.join(DIR_INPUT, 'scripts');
 
 
+// Loaders
+const rules = [
+	{
+		test: /\.html$/i,
+		loader: 'html-loader'
+	},
+	{
+		test: /\.(c|s[ac])ss$/i,
+		use: [
+			MiniCssExtractPlugin.loader,
+			'css-loader',
+			'postcss-loader',
+			'sass-loader'
+		]
+	},
+	{
+		test: /\.m?js$/,
+		exclude: /node_modules/,
+		use: [
+			'babel-loader'
+		]
+	},
+	{
+		test: /\.(png|svg|jpg|gif)$/i,
+		type: 'asset'
+	}
+];
+
+// Plugins
+const plugins = [
+	new HtmlWebpackPlugin({
+		template: path.join(DIR_INPUT, 'index.html'),
+		filename: '[name].html',
+	}),
+	new HtmlReplacePlugin([
+		{
+			pattern: 'API_KEY',
+			replacement: process.env.API_KEY
+		}
+	]),
+	new HtmlInlineSVGPlugin(),
+	new MiniCssExtractPlugin(),
+	new ImageMinimizerPlugin({
+		minimizerOptions: {
+			plugins: [
+				'optipng',
+				'svgo'
+			]
+		}
+	})
+];
+
+
 module.exports = {
 
 	entry: {
@@ -22,8 +75,7 @@ module.exports = {
 	output: {
 		filename: '[name].js',
 		path: DIR_OUTPUT,
-		clean: true,
-		assetModuleFilename: 'assets/[hash][ext][query]'
+		clean: true
 	},
 
 	mode: 'none',
@@ -36,56 +88,9 @@ module.exports = {
 		open: false
 	},
 
+	plugins,
 	module: {
-		rules: [
-			{
-				test: /\.html$/i,
-				loader: 'html-loader'
-			},
-			{
-				test: /\.(c|s[ac])ss$/i,
-				use: [
-					MiniCssExtractPlugin.loader,
-					'css-loader',
-					'postcss-loader',
-					'sass-loader'
-				]
-			},
-			{
-				test: /\.m?js$/,
-				exclude: /node_modules/,
-				use: [
-					'babel-loader'
-				]
-			},
-			{
-				test: /\.(png|svg|jpg|gif)$/i,
-				type: 'asset'
-			}
-		]
-	},
-
-	plugins: [
-		new HtmlWebpackPlugin({
-			template: path.join(DIR_INPUT, 'index.html'),
-			filename: '[name].html',
-		}),
-		new HtmlReplacePlugin([
-			{
-				pattern: 'API_KEY',
-				replacement: process.env.API_KEY
-			}
-		]),
-		new HtmlInlineSVGPlugin(),
-		new MiniCssExtractPlugin(),
-		new ImageMinimizerPlugin({
-			minimizerOptions: {
-				plugins: [
-					'optipng',
-					'svgo'
-				]
-			}
-		})
-	]
+		rules
+	}
 
 };
