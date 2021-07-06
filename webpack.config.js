@@ -2,45 +2,62 @@ const path = require('path');
 require('dotenv').config();
 
 // Plugins
-const HtmlWebpackPlugin		= require('html-webpack-plugin'),
-	  HtmlReplacePlugin		= require('html-replace-webpack-plugin'),
-	  MiniCssExtractPlugin	= require('mini-css-extract-plugin'),
+const HTMLWebpackPlugin		= require('html-webpack-plugin'),
+	  HTMLReplacePlugin		= require('html-replace-webpack-plugin'),
+	  MiniCSSExtractPlugin	= require('mini-css-extract-plugin'),
 	  CopyPlugin			= require('copy-webpack-plugin');
 
+// Paths
+const DIR_INPUT		= path.resolve(__dirname, 'src'),
+	  DIR_OUTPUT	= path.resolve(__dirname, 'dist'),
+	  DIR_ASSETS	= path.resolve(__dirname, 'assets'),
+	  DIR_JS		= path.join(DIR_INPUT, 'scripts'),
+	  DIR_CSS		= path.join(DIR_INPUT, 'sass'),
+	  DIR_PNG		= path.join(DIR_ASSETS, 'png');
+
+
 module.exports = {
+
 	entry: {
-		index: './src/js/index.js'
+		index: path.join(DIR_JS, 'index.js')
 	},
+
+	output: {
+		filename: '[name].js',
+		path: DIR_OUTPUT,
+		clean: true,
+		assetModuleFilename: 'assets/[hash][ext][query]'
+	},
+
 	mode: 'none',
 	devtool: 'source-map',
 	devServer: {
-		contentBase: './docs',
-		open: false,
+		contentBase: DIR_OUTPUT,
+		open: false
 	},
+
 	plugins: [
-		new HtmlWebpackPlugin({
-			template: './src/index.html',
+		new HTMLWebpackPlugin({
+			template: path.join(DIR_INPUT, 'index.html'),
 			filename: '[name].html',
 		}),
-		new HtmlReplacePlugin([
+		new HTMLReplacePlugin([
 			{
 				pattern: 'API_KEY',
 				replacement: process.env.API_KEY
 			}
 		]),
-		new MiniCssExtractPlugin(),
+		new MiniCSSExtractPlugin(),
 		new CopyPlugin({
 			patterns: [
-				{ from: './src/assets/png/**/*.png', to: 'assets/[name].png' },
-			],
-		}),
+				{
+					from: '**/*.png',
+					to: 'assets/[name].png'
+				}
+			]
+		})
 	],
-	output: {
-		filename: '[name].js',
-		path: path.resolve(__dirname, 'docs'),
-		clean: true,
-		assetModuleFilename: 'assets/[hash][ext][query]',
-	},
+
 	module: {
 		rules: [
 			{
@@ -59,6 +76,7 @@ module.exports = {
 				test: /\.(png|svg|jpg|gif)$/i,
 				type: 'asset/resource',
 			}
-		],
-	},
+		]
+	}
+
 };
