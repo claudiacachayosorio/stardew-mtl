@@ -1,7 +1,6 @@
 const path = require('path');
 require('dotenv').config();
 
-// Plugins
 const HTMLWebpackPlugin		= require('html-webpack-plugin'),
 	  HTMLInlineSVGPlugin 	= require('html-webpack-inline-svg-plugin'),
 	  HTMLReplacePlugin		= require('html-replace-webpack-plugin'),
