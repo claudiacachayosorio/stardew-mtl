@@ -1,8 +1,8 @@
 import $ from '../data/colors.json';
-import { busMarker } from './markers';
+import { data } from './data';
 
 
-// map options
+// Map options
 
 const styles = [
 	{ elementType: 'labels',							stylers: [{ visibility: 'off' }] },
@@ -10,18 +10,18 @@ const styles = [
 	{ featureType: 'transit.line',						stylers: [{ visibility: 'off' }] },
 	{ featureType: 'transit.station.rail',				stylers: [{ visibility: 'off' }] },
 
-	{ featureType: 'all',								stylers: [{ color: $["soil-dark"] }] },
-	{ featureType: 'landscape',							stylers: [{ color: $["grass"] }] },
-	{ featureType: 'water',								stylers: [{ color: $["water"] }] },
-	{ featureType: 'poi',								stylers: [{ color: $["pavement"] }] },
-	{ featureType: 'poi.park',							stylers: [{ color: $["grass-dark"] }] },
-	{ featureType: 'road.arterial',						stylers: [{ color: $["soil"] }] },
-	{ featureType: 'road.highway',						stylers: [{ color: $["road-marking"] }] },
-	{ featureType: 'road.highway.controlled_access',	stylers: [{ color: $["road"] }] },
-	{ featureType: 'transit.station.airport',			stylers: [{ color: $["pavement"] }] },
+	{ featureType: 'all',								stylers: [{ color: $['soil-dark'] }] },
+	{ featureType: 'landscape',							stylers: [{ color: $.grass }] },
+	{ featureType: 'water',								stylers: [{ color: $.water }] },
+	{ featureType: 'poi',								stylers: [{ color: $.pavement }] },
+	{ featureType: 'poi.park',							stylers: [{ color: $['grass-dark'] }] },
+	{ featureType: 'road.arterial',						stylers: [{ color: $.soil }] },
+	{ featureType: 'road.highway',						stylers: [{ color: $['road-marking'] }] },
+	{ featureType: 'road.highway.controlled_access',	stylers: [{ color: $.road }] },
+	{ featureType: 'transit.station.airport',			stylers: [{ color: $.pavement }] },
 ];
 
-export const mapCenter = busMarker.position;
+export const mapCenter = data[0].position;
 
 const mapOptions = {
 	center: mapCenter,
@@ -36,4 +36,4 @@ const mapOptions = {
 export let map;
 export default function initMap() {
 	map = new google.maps.Map(document.getElementById('map'), mapOptions);
-};
+}

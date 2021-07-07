@@ -8,6 +8,7 @@ function setCSSvars(data) {
 		document.documentElement.style.setProperty(`--color-${name}`, hex);
 	}
 }
+
 setCSSvars($);
 
 
@@ -15,9 +16,11 @@ setCSSvars($);
 
 import initMap from './map';
 import initMarkers from './markers';
-import initRecenter from './recenter';
-import initClock from './clock/control';
 initMap();
 initMarkers();
+
+// Controls
+import initRecenter from './recenter';
+import initClock from './clock/index';
 initRecenter();
 initClock();

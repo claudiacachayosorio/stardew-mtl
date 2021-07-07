@@ -6,9 +6,11 @@
 			"lng": -73.7414325471116
 		},
 		"icon": {
-			"fn": "bus",
-			"width": 512,
-			"height": 255
+			"png": {
+				"fn": "bus",
+				"width": 512,
+				"height": 255
+			}
 		}
 	},
 	{
@@ -18,9 +20,11 @@
 			"lng": -73.7456076958713
 		},
 		"icon": {
-			"fn": "jojamart",
-			"width": 384,
-			"height": 312
+			"png": {
+				"fn": "jojamart",
+				"width": 384,
+				"height": 312
+			}
 		}
 	},
 	{
@@ -30,9 +34,11 @@
 			"lng": -73.6171524003503
 		},
 		"icon": {
-			"fn": "witchs_hut",
-			"width": 336,
-			"height": 279
+			"png": {
+				"fn": "witchs_hut",
+				"width": 336,
+				"height": 279
+			}
 		}
 	},
 	{
@@ -42,9 +48,11 @@
 			"lng": -73.54994420832364
 		},
 		"icon": {
-			"fn": "leahs_cottage",
-			"width": 447,
-			"height": 378
+			"png": {
+				"fn": "leahs_cottage",
+				"width": 447,
+				"height": 378
+			}
 		}
 	},
 	{
@@ -54,9 +62,11 @@
 			"lng": -73.56299817393943
 		},
 		"icon": {
-			"fn": "ranch",
-			"width": 1152,
-			"height": 632
+			"png": {
+				"fn": "ranch",
+				"width": 1152,
+				"height": 632
+			}
 		}
 	},
 	{
@@ -66,9 +76,11 @@
 			"lng": -73.56165316127093
 		},
 		"icon": {
-			"fn": "mayors_manor",
-			"width": 576,
-			"height": 896
+			"png": {
+				"fn": "mayors_manor",
+				"width": 576,
+				"height": 896
+			}
 		}
 	},
 	{
@@ -78,9 +90,11 @@
 			"lng": -73.6283952866005
 		},
 		"icon": {
-			"fn": "trailer_large",
-			"width": 384,
-			"height": 399
+			"png": {
+				"fn": "trailer_large",
+				"width": 384,
+				"height": 399
+			}
 		}
 	},
 	{
@@ -90,9 +104,11 @@
 			"lng": -73.61421428613065
 		},
 		"icon": {
-			"fn": "pierres_shop",
-			"width": 322,
-			"height": 320
+			"png": {
+				"fn": "pierres_shop",
+				"width": 322,
+				"height": 320
+			}
 		}
 	},
 	{
@@ -102,9 +118,11 @@
 			"lng": -73.56850027237539
 		},
 		"icon": {
-			"fn": "coop",
-			"width": 384,
-			"height": 436
+			"png": {
+				"fn": "coop",
+				"width": 384,
+				"height": 436
+			}
 		}
 	},
 	{
@@ -114,9 +132,11 @@
 			"lng": -73.55640264135363
 		},
 		"icon": {
-			"fn": "saloon",
-			"width": 396,
-			"height": 435
+			"png": {
+				"fn": "saloon",
+				"width": 396,
+				"height": 435
+			}
 		}
 	},
 	{
@@ -126,9 +146,11 @@
 			"lng": -73.5761720027772
 		},
 		"icon": {
-			"fn": "oasis",
-			"width": 508,
-			"height": 664
+			"png": {
+				"fn": "oasis",
+				"width": 508,
+				"height": 664
+			}
 		}
 	},
 	{
@@ -138,9 +160,11 @@
 			"lng": -73.58794237518575
 		},
 		"icon": {
-			"fn": "tent",
-			"width": 192,
-			"height": 384
+			"png": {
+				"fn": "tent",
+				"width": 192,
+				"height": 384
+			}
 		}
 	},
 	{
@@ -150,9 +174,11 @@
 			"lng": -73.57947864398147
 		},
 		"icon": {
-			"fn": "museum",
-			"width": 576,
-			"height": 512
+			"png": {
+				"fn": "museum",
+				"width": 576,
+				"height": 512
+			}
 		}
 	},
 	{
@@ -162,9 +188,11 @@
 			"lng": -73.54669927023373
 		},
 		"icon": {
-			"fn": "fish_shop",
-			"width": 444,
-			"height": 459
+			"png": {
+				"fn": "fish_shop",
+				"width": 444,
+				"height": 459
+			}
 		}
 	},
 	{
@@ -174,9 +202,11 @@
 			"lng": -73.54073498928062
 		},
 		"icon": {
-			"fn": "hat_shop",
-			"width": 508,
-			"height": 535
+			"png": {
+				"fn": "hat_shop",
+				"width": 508,
+				"height": 535
+			}
 		}
 	},
 	{
@@ -186,9 +216,11 @@
 			"lng": -73.60382224510487
 		},
 		"icon": {
-			"fn": "community_center",
-			"width": 384,
-			"height": 320
+			"png": {
+				"fn": "community_center",
+				"width": 384,
+				"height": 320
+			}
 		}
 	},
 	{
@@ -198,9 +230,11 @@
 			"lng": -73.65200322848719
 		},
 		"icon": {
-			"fn": "1_river_road",
-			"width": 568,
-			"height": 640
+			"png": {
+				"fn": "1_river_road",
+				"width": 568,
+				"height": 640
+			}
 		}
 	},
 	{
@@ -210,9 +244,11 @@
 			"lng": -73.55034073496597
 		},
 		"icon": {
-			"fn": "elliotts_cabin",
-			"width": 320,
-			"height": 448
+			"png": {
+				"fn": "elliotts_cabin",
+				"width": 320,
+				"height": 448
+			}
 		}
 	}
 ]

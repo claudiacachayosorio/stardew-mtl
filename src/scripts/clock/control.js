@@ -1,60 +1,45 @@
 import { map } from '../map';
-import setContent from './content';
 
-export let
-	innerDiv,
-	dayDiv,
-	timeDiv,
-	iconsDiv,
-	weatherImg,
-	seasonImg;
-
-function createElements() {
-	innerDiv	= document.createElement('div'),
-	dayDiv		= document.createElement('div'),
-	iconsDiv	= document.createElement('div'),
-	timeDiv		= document.createElement('div'),
-	weatherImg	= document.createElement('img'),
-	seasonImg	= document.createElement('img');
-}
+export const html = {
+	innerDiv:	document.createElement('div'),
+	dayDiv:		document.createElement('div'),
+	iconsDiv:	document.createElement('div'),
+	timeDiv:	document.createElement('div'),
+	weatherImg:	document.createElement('img'),
+	seasonImg:	document.createElement('img')
+};
 
 function setClasses() {
-	innerDiv.className		= 'map-ctrl clock';
-	dayDiv.className		= 'clock-day';
-	timeDiv.className		= 'clock-time';
-	iconsDiv.className		= 'clock-i';
-	weatherImg.className	= 'i-weather';
-	seasonImg.className		= 'i-season';
+	html.innerDiv.className		= 'map-ctrl clock';
+	html.dayDiv.className		= 'clock-day';
+	html.timeDiv.className		= 'clock-time';
+	html.iconsDiv.className		= 'clock-i';
+	html.weatherImg.className	= 'i-weather';
+	html.seasonImg.className	= 'i-season';
 }
 
 function appendElements() {
-	iconsDiv.appendChild(weatherImg);
-	iconsDiv.appendChild(seasonImg);
+	html.iconsDiv.appendChild(html.weatherImg);
+	html.iconsDiv.appendChild(html.seasonImg);
 
-	innerDiv.appendChild(dayDiv);
-	innerDiv.appendChild(iconsDiv);
-	innerDiv.appendChild(timeDiv);
+	html.innerDiv.appendChild(html.dayDiv);
+	html.innerDiv.appendChild(html.iconsDiv);
+	html.innerDiv.appendChild(html.timeDiv);
 }
 
-function initInnerElements() {
-	createElements();
+function setInnerElements() {
 	setClasses();
 	appendElements();
 }
 
 function initOuterDiv() {
 	const outerDiv = document.createElement('div');
-	outerDiv.appendChild(innerDiv);
+	outerDiv.appendChild(html.innerDiv);
 	return outerDiv;
 }
 
-function initMapControl() {
-	initInnerElements();
+export default function initMapControl() {
+	setInnerElements();
 	const outerDiv = initOuterDiv();
 	map.controls[google.maps.ControlPosition.RIGHT_TOP].push(outerDiv);
-}
-
-export default function initClock() {
-	initMapControl();
-	setContent();
 }

@@ -30,14 +30,13 @@ a
 	text-decoration: none
 	transition: filter 0.3s
 
-	&:hover
+	&:hover, &:focus
 		filter: saturate(200%)
 
 .i
 	filter: $filter-shadow
 
-// control icons sizes with container
-.i-svg, .i-a
+.i-svg
 	height: inherit
 	width: inherit
 
@@ -202,10 +201,9 @@ footer
 .tagline
 	margin-bottom: 1rem
 
-.i
+.svg
 	&_heart
-		> svg
-			margin-top: 0.5rem
+		margin-top: 0.5rem
 
 .stack
 	font-family: $font-fallback

@@ -2,10 +2,10 @@ const path = require('path');
 require('dotenv').config();
 
 // Plugins
-const HtmlWebpackPlugin		= require('html-webpack-plugin'),
-	  HtmlInlineSVGPlugin 	= require('html-webpack-inline-svg-plugin'),
-	  HtmlReplacePlugin		= require('html-replace-webpack-plugin'),
-	  MiniCssExtractPlugin	= require('mini-css-extract-plugin'),
+const HTMLWebpackPlugin		= require('html-webpack-plugin'),
+	  HTMLInlineSVGPlugin 	= require('html-webpack-inline-svg-plugin'),
+	  HTMLReplacePlugin		= require('html-replace-webpack-plugin'),
+	  MiniCSSExtractPlugin	= require('mini-css-extract-plugin'),
 	  ImageMinimizerPlugin	= require('image-minimizer-webpack-plugin');
 
 // Paths
@@ -23,7 +23,7 @@ const rules = [
 	{
 		test: /\.(c|s[ac])ss$/i,
 		use: [
-			MiniCssExtractPlugin.loader,
+			MiniCSSExtractPlugin.loader,
 			'css-loader',
 			'postcss-loader',
 			'sass-loader'
@@ -42,28 +42,33 @@ const rules = [
 	}
 ];
 
+
 // Plugins
+
+const HTMLWebpackConfig = {
+	template: path.join(DIR_INPUT, 'index.html'),
+	filename: '[name].html',
+};
+
+const HTMLReplaceConfig = [
+	{
+		pattern: 'API_KEY',
+		replacement: process.env.API_KEY
+	}
+];
+
+const ImageMinimizerConfig = {
+	minimizerOptions: {
+		plugins: [ 'optipng', 'svgo' ]
+	}
+};
+
 const plugins = [
-	new HtmlWebpackPlugin({
-		template: path.join(DIR_INPUT, 'index.html'),
-		filename: '[name].html',
-	}),
-	new HtmlReplacePlugin([
-		{
-			pattern: 'API_KEY',
-			replacement: process.env.API_KEY
-		}
-	]),
-	new HtmlInlineSVGPlugin(),
-	new MiniCssExtractPlugin(),
-	new ImageMinimizerPlugin({
-		minimizerOptions: {
-			plugins: [
-				'optipng',
-				'svgo'
-			]
-		}
-	})
+	new HTMLWebpackPlugin(HTMLWebpackConfig),
+	new HTMLReplacePlugin(HTMLReplaceConfig),
+	new HTMLInlineSVGPlugin(),
+	new MiniCSSExtractPlugin(),
+	new ImageMinimizerPlugin(ImageMinimizerConfig)
 ];
 
 
@@ -89,8 +94,6 @@ module.exports = {
 	},
 
 	plugins,
-	module: {
-		rules
-	}
+	module: { rules }
 
 };

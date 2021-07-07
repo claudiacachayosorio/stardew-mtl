@@ -1,10 +1,8 @@
-import {
-	dayDiv, timeDiv, seasonImg, weatherImg
-} from './control';
+import { html } from './control';
 
-let data;
+let dateObj;
 function loadData() {
-	data = new Date();
+	dateObj = new Date();
 }
 
 
@@ -14,7 +12,7 @@ function getWeekDay() {
 	const arr = [
 		'sun', 'mon', 'tue', 'thu', 'wed', 'fri', 'sat'
 	];
-	const int = data.getDay();
+	const int = dateObj.getDay();
 	return arr[int];
 }
 
@@ -23,18 +21,17 @@ const formatWeekDay = str => str.charAt(0).toUpperCase() + str.slice(1);
 
 let date;
 function setDay() {
-	date = data.getDate();
+	date = dateObj.getDate();
 	const weekdayStr = getWeekDay();
 	const weekday = formatWeekDay(weekdayStr);
-
-	dayDiv.innerHTML = `${weekday}. ${date}`;
+	html.dayDiv.innerHTML = `${weekday}. ${date}`;
 }
 
 
 // Time div - (H)H:MM
 
 function getMinutes() {
-	let minInt = data.getMinutes();
+	let minInt = dateObj.getMinutes();
 	// format minutes as always :MM
 	return minInt < 10
 		? `0${minInt}`
@@ -44,13 +41,13 @@ function getMinutes() {
 let hours,
 	minutes;
 function getTime() {
-	hours	= data.getHours();
+	hours	= dateObj.getHours();
 	minutes	= getMinutes();
 }
 
 function setTime() {
 	getTime();
-	timeDiv.innerHTML = `${hours}:${minutes}`;
+	html.timeDiv.innerHTML = `${hours}:${minutes}`;
 }
 
 
@@ -73,7 +70,7 @@ function updateTime() {
 
 let season;
 function getSeason() {
-	const month = data.getMonth();
+	const month = dateObj.getMonth();
 	const arr = [ 'winter', 'spring', 'summer', 'fall' ];
 
 	switch (month) {
@@ -101,7 +98,7 @@ function getSeason() {
 
 function setSeasonIcon() {
 	const icon = require(`../../assets/png/clock/${season}.png`);
-	seasonImg.setAttribute('src', icon);
+	html.seasonImg.setAttribute('src', icon);
 };
 
 function setSeason() {
@@ -133,7 +130,7 @@ function getWeather() {
 
 function setWeatherIcon(weather) {
 	const icon = require(`../../assets/png/clock/${weather}.png`);
-	weatherImg.setAttribute('src', icon);
+	html.weatherImg.setAttribute('src', icon);
 };
 
 function setWeather() {
@@ -147,7 +144,7 @@ function setWeather() {
 
 // Initialize all content
 
-export default function setContent() {
+export default function initApp() {
 	loadData();
 	setDay();
 	setTime();
