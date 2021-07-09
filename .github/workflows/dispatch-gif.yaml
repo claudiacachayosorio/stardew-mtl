@@ -2,7 +2,7 @@ name: run create-gif workflow
 on: [push]
 
 jobs:
-  run-commit:
+  dispatch-workflow:
     runs-on: ubuntu-latest
 
     steps:
