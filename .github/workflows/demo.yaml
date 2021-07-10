@@ -1,6 +1,7 @@
 name: generate new demo
 on: [push]
-  branches: [main]
+  branches:
+    - main
 
 jobs:
   dispatch-gif:
