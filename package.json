@@ -1,5 +1,6 @@
 {
   "name": "stardew-mtl",
+  "homepage": "https://stardew-mtl.netlify.app/",
   "private": true,
   "scripts": {
     "start": "webpack serve",
