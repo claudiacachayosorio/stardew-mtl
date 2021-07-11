@@ -20,5 +20,5 @@ All Stardew Valley images are from the [Stardew Valley Wiki](https://stardewvall
 
 
 <!-- Variables -->
-[demo]: https://cco-demo-gifs.s3.amazonaws.com/test.gif?
+[demo]: https://cco-demo-gifs.s3.amazonaws.com/stardew-mtl.gif?
 [demo-url]: https://stardew-mtl.netlify.app/
