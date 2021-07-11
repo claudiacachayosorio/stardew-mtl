@@ -19,7 +19,6 @@ All Stardew Valley images are from the [Stardew Valley Wiki](https://stardewvall
 * [Londrina Solid](https://fonts.google.com/specimen/Londrina+Solid) by Marcelo Magalhães
 
 
-
-
-[demo]: https://cco-demo-gifs.s3.amazonaws.com/stardew-mtl.gif
+<!-- Variables -->
+[demo]: https://cco-demo-gifs.s3.amazonaws.com/stardew-mtl.gif?
 [demo-url]: https://stardew-mtl.netlify.app/
