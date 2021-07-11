@@ -2,7 +2,7 @@
 
 Static website displaying a map of Montreal customized with a Stardew Valley theme. Built with Google Maps JavaScript API and Sass. My take on [this prompt](https://www.codementor.io/projects/web/build-a-custom-google-maps-theme-bf8levr6eg) by [Jessica Chan](https://coder-coder.com/).
 
-[![demo][[demo]][demo-url]
+[![demo][demo]][demo-url]
 
 ## Credits
 
